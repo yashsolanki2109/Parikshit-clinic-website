@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PARIKSHIT CLINIC in Vadodara offers dental, periodontal and facial aesthetic services. Contact Dr. Jinal Parmar to request an appointment.">
+  <meta name="theme-color" content="#123f40">
+  <title>PARIKSHIT CLINIC | Dental & Facial Aesthetics</title>
+
+  <style>
+
+    .brand-lockup { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; }
+    .brand-lockup img { width: 54px; height: 54px; object-fit: contain; display: block; border-radius: 10px; }
+    footer .brand-lockup img { width: 64px; height: 64px; }
+    @media (max-width: 520px) { .brand-lockup img { width: 44px; height: 44px; } }
+    .brand-lockup .brand-name { display: block; font-weight: 800; letter-spacing: .04em; line-height: 1.1; }
+    .brand-lockup .brand-tagline { display: block; font-size: .72rem; font-weight: 500; margin-top: 4px; color: var(--muted); }
+    footer .brand-lockup { margin-bottom: 12px; }
+
+    /* =========================
+       1. COLOURS AND BASE STYLES
+       Change these variables to update the whole website's colours.
+       ========================= */
+    :root {
+      --teal: #147c78;
+      --deep-teal: #123f40;
+      --pale-teal: #edf7f5;
+      --gold: #c3a56b;
+      --ink: #243c3e;
+      --muted: #627476;
+      --white: #ffffff;
+      --border: #dfe9e7;
+      --lavender: #f6f1f8;
+      --shadow: 0 14px 36px rgba(18, 63, 64, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 92px; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      line-height: 1.7;
+      background: var(--white);
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; }
+    button, input, select, textarea { font: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    h1, h2, h3, h4 { color: var(--deep-teal); line-height: 1.25; }
+    p { margin: 0 0 14px; }
+    .container { width: min(1120px, 91%); margin: 0 auto; }
+    .section { padding: 76px 0; }
+    .eyebrow {
+      color: var(--teal);
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .section-heading {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 36px;
+    }
+    .section-heading h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); margin: 0 0 14px; }
+    .muted { color: var(--muted); }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 13px 20px;
+      border: 1px solid var(--teal);
+      border-radius: 8px;
+      background: var(--teal);
+      color: white;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform .2s, background .2s;
+    }
+    .button:hover { background: var(--deep-teal); border-color: var(--deep-teal); transform: translateY(-1px); }
+    .button-outline { color: var(--teal); background: transparent; }
+    .button-outline:hover { color: white; }
+    .button-gold { color: var(--deep-teal); background: var(--gold); border-color: var(--gold); }
+    .button-gold:hover { background: #d4ba87; border-color: #d4ba87; color: var(--deep-teal); }
+
+    /* =========================
+       2. HEADER AND NAVIGATION
+       ========================= */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255,255,255,.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .navbar { min-height: 82px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .brand { display: inline-block; color: var(--deep-teal); text-decoration: none; font-weight: 900; letter-spacing: 1.2px; font-size: 1.15rem; line-height: 1.3; }
+    .brand small { display: block; color: var(--teal); font-size: .64rem; letter-spacing: 1.8px; font-weight: 700; margin-top: 5px; }
+    .nav-links { display: flex; align-items: center; gap: 22px; }
+    .nav-links a { font-size: .91rem; font-weight: 700; text-decoration: none; }
+    .nav-links a:hover { color: var(--teal); }
+    .menu-toggle { display: none; padding: 9px 12px; border: 1px solid var(--border); border-radius: 8px; background: white; color: var(--deep-teal); cursor: pointer; }
+
+    /* =========================
+       3. HOME HERO
+       ========================= */
+    .hero { background: linear-gradient(125deg, #edf7f5 0%, #fff 58%, #f8f4eb 100%); padding: 76px 0; }
+    .hero-grid { display: grid; grid-template-columns: 1.1fr .9fr; align-items: center; gap: 50px; }
+    .hero h1 { font-size: clamp(2.35rem, 5vw, 4.1rem); letter-spacing: -1.5px; margin: 0 0 20px; }
+    .hero h1 span { color: var(--teal); }
+    .hero-copy { max-width: 620px; color: #4f6668; font-size: 1.08rem; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 27px; }
+    .doctor-line { margin-top: 24px; font-size: .95rem; }
+    .hero-photo-wrap { position: relative; }
+    .hero-photo {
+      min-height: 390px;
+      border-radius: 22px;
+      overflow: hidden;
+      background: #dcece8;
+      box-shadow: var(--shadow);
+    }
+    .hero-photo img { width: 100%; height: 390px; object-fit: cover; }
+    .photo-placeholder {
+      min-height: 390px;
+      display: grid;
+      place-items: center;
+      padding: 28px;
+      text-align: center;
+      color: var(--deep-teal);
+      background: linear-gradient(145deg, #dcefe9, #f8f3e9);
+    }
+    .photo-note { font-size: .75rem; color: var(--muted); margin: 9px 0 0; }
+    .hero-badge {
+      position: absolute;
+      left: -18px;
+      bottom: 22px;
+      background: white;
+      border-left: 4px solid var(--gold);
+      padding: 14px 18px;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      max-width: 240px;
+      font-size: .88rem;
+    }
+
+    /* =========================
+       4. INTRO AND TRUST POINTS
+       ========================= */
+    .intro-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 34px; }
+    .trust-card { padding: 22px; border: 1px solid var(--border); border-radius: 12px; background: white; }
+    .trust-card strong { display: block; color: var(--deep-teal); margin-bottom: 6px; }
+    .trust-card p { color: var(--muted); font-size: .92rem; margin: 0; }
+
+    /* =========================
+       5. TREATMENT DEPARTMENTS
+       ========================= */
+    .dental-section { background: #f4f9f8; }
+    .aesthetic-section { background: #fbf8fc; }
+    .department-banner { background: white; border: 1px solid var(--border); border-radius: 16px; padding: 28px 30px; margin-bottom: 34px; }
+    .department-banner h2 { margin: 0 0 10px; font-size: clamp(1.8rem, 4vw, 2.5rem); }
+    .department-banner p:last-child { margin-bottom: 0; }
+    .aesthetic-section .department-banner { border-color: #eadff0; }
+    .category-title { font-size: 1.3rem; margin: 34px 0 16px; }
+    .service-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+    .service-card {
+      padding: 23px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 13px;
+      box-shadow: 0 5px 18px rgba(18,63,64,.035);
+      transition: transform .2s, box-shadow .2s;
+    }
+    .service-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+    .service-card h4 { margin: 0 0 8px; font-size: 1.06rem; }
+    .service-card p { margin: 0; color: var(--muted); font-size: .93rem; }
+    .clinical-note { margin-top: 25px; font-size: .84rem; color: var(--muted); }
+
+    /* =========================
+       6. ABOUT DOCTOR
+       ========================= */
+    .about-grid { display: grid; grid-template-columns: 1fr; max-width: 820px; margin-inline: auto; }
+    .doctor-placeholder { min-height: 330px; display: grid; place-items: center; padding: 25px; text-align: center; color: var(--teal); background: linear-gradient(145deg, #e1f0ec, #f8f2e8); }
+    .qualifications { padding-left: 21px; margin: 18px 0 24px; }
+    .qualifications li { margin: 7px 0; }
+
+    /* =========================
+       7. FAQ
+       ========================= */
+    .faq-section { background: #f7faf9; }
+    .faq-list { max-width: 850px; margin: auto; }
+    details { background: white; border: 1px solid var(--border); border-radius: 10px; padding: 17px 20px; margin: 12px 0; }
+    summary { color: var(--deep-teal); font-weight: 700; cursor: pointer; }
+    details p { color: var(--muted); margin: 12px 0 0; }
+
+    /* =========================
+       8. CONTACT AND APPOINTMENT FORM
+       ========================= */
+    .contact-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 26px; align-items: start; }
+    .contact-panel, .form-panel { border: 1px solid var(--border); border-radius: 14px; padding: 27px; background: white; box-shadow: 0 6px 22px rgba(18,63,64,.035); }
+    .contact-panel h3, .form-panel h3 { margin: 0 0 16px; }
+    .contact-item { padding: 14px 0; border-bottom: 1px solid #edf1f0; }
+    .contact-item:last-of-type { border-bottom: 0; }
+    .contact-item strong { display: block; color: var(--deep-teal); margin-bottom: 4px; }
+    .contact-item p { margin: 0; color: var(--muted); }
+    .contact-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .form-panel label { display: block; font-weight: 700; font-size: .91rem; margin: 13px 0 6px; }
+    .form-panel input, .form-panel select, .form-panel textarea {
+      width: 100%; padding: 12px; border: 1px solid #cad9d7; border-radius: 7px; background: white; color: var(--ink);
+    }
+    .form-panel input:focus, .form-panel select:focus, .form-panel textarea:focus { outline: 2px solid #a5d7d0; border-color: var(--teal); }
+    .form-panel button { width: 100%; margin-top: 18px; }
+    .form-help { color: var(--muted); font-size: .81rem; margin: 12px 0 0; }
+    .status { color: var(--deep-teal); font-weight: 700; font-size: .9rem; margin-top: 12px; }
+
+    /* =========================
+       9. FOOTER
+       ========================= */
+    footer { background: var(--deep-teal); color: #e6f1ef; padding: 36px 0; text-align: center; }
+    footer h3 { color: white; margin: 0 0 8px; }
+    footer p { margin: 7px 0; font-size: .9rem; }
+    footer a { color: white; }
+    .footer-note { max-width: 850px; margin: 18px auto 0 !important; color: #d0e0de; font-size: .8rem !important; }
+
+    /* =========================
+       10. SMALL SCREENS
+       ========================= */
+    @media (max-width: 900px) {
+      .menu-toggle { display: inline-block; }
+      .nav-links {
+        display: none; position: absolute; top: 81px; left: 0; right: 0;
+        padding: 20px 5%; background: white; border-bottom: 1px solid var(--border);
+        flex-direction: column; align-items: flex-start; gap: 16px;
+      }
+      .nav-links.open { display: flex; }
+      .hero-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; }
+      .hero { padding: 55px 0; }
+      .hero-photo, .hero-photo img, .photo-placeholder { min-height: 280px; height: 280px; }
+      .hero-badge { left: 12px; }
+      .service-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .about-grid { gap: 26px; }
+    }
+    @media (max-width: 580px) {
+      .section { padding: 54px 0; }
+      .service-grid, .intro-grid, .form-row { grid-template-columns: 1fr; }
+      .department-banner, .contact-panel, .form-panel { padding: 21px; }
+      .hero-actions .button { width: 100%; }
+      .brand { font-size: 1rem; }
+      .brand small { font-size: .57rem; letter-spacing: 1px; }
+    }
+  
+    /* 3D scroll experience: layered depth, reveal motion, and expandable service cards */
+    html { scroll-behavior: smooth; }
+    body { overflow-x: hidden; }
+    .section, .hero { position: relative; isolation: isolate; }
+    .hero { perspective: 1200px; overflow: hidden; }
+    .hero-grid { transform-style: preserve-3d; }
+    .hero-photo-wrap { transform: rotateY(-5deg) rotateX(2deg); transform-style: preserve-3d; transition: transform .55s ease, filter .55s ease; }
+    .hero-photo-wrap:hover { transform: rotateY(0) rotateX(0) translateY(-6px); }
+    .hero-photo { transform: translateZ(24px); }
+    .hero-badge { transform: translateZ(55px); }
+    .trust-card, .service-card, .contact-panel, .form-panel { transform: perspective(900px) translateZ(0); transition: transform .35s ease, box-shadow .35s ease; }
+    .trust-card:hover, .service-card:hover, .contact-panel:hover, .form-panel:hover { transform: perspective(900px) translateY(-6px) rotateX(1deg); box-shadow: 0 22px 44px rgba(18,63,64,.12); }
+    .section-heading h2 { text-wrap: balance; }
+    .reveal { opacity: 0; transform: translateY(34px) rotateX(2deg); transition: opacity .75s ease, transform .75s cubic-bezier(.2,.75,.25,1); }
+    .reveal.is-visible { opacity: 1; transform: translateY(0) rotateX(0); }
+    .service-card { overflow: hidden; cursor: pointer; }
+    .service-card h4::after { content: '+'; float: right; margin-left: auto; color: var(--teal); font-size: 1.35rem; font-weight: 400; line-height: 1; transition: transform .25s; }
+    .service-card.is-expanded h4::after { transform: rotate(45deg); }
+    .service-card p { max-height: 0; opacity: 0; overflow: hidden; transition: max-height .35s ease, opacity .25s ease; }
+    .service-card.is-expanded p { max-height: 300px; opacity: 1; margin-top: 8px; }
+    details { transition: transform .25s ease, box-shadow .25s ease; }
+    details[open] { box-shadow: var(--shadow); transform: translateY(-2px); }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
+      .reveal { opacity: 1; transform: none; }
+    }
+    @media (max-width: 700px) {
+      .hero-photo-wrap { transform: none; }
+      .service-card p { max-height: none; opacity: 1; }
+
+    }
+
+    /* Treatment title icons inspired by the shared blue dental reference. */
+    .service-card h4::after { margin-left: auto; }
+    .category-title { display: flex; align-items: center; gap: 12px; }
+
+    /* Distinct dental and wellness icons for the reference inspired treatment layout. */
+    .category-title { display: flex; align-items: center; gap: 12px; }
+
+    /* LUMA inspired premium clinic direction: pearl, periwinkle, glass, and depth. */
+    :root {
+      --teal: #6876a4; --deep-teal: #252b49; --pale-teal: #eef0fa;
+      --gold: #c7b9e5; --ink: #303550; --muted: #747a91; --border: #e2e4ef;
+      --lavender: #f3effa; --shadow: 0 18px 50px rgba(43,49,83,.10);
+    }
+    body { background: #f8f8fb; color: var(--ink); font-family: 'Plus Jakarta Sans', 'Aptos', Arial, sans-serif; }
+    h1,h2,h3,h4 { color: var(--deep-teal); letter-spacing: -.025em; }
+    .site-header { background: rgba(250,250,253,.82); border-color: rgba(226,228,239,.75); box-shadow: 0 4px 24px rgba(43,49,83,.04); }
+    .navbar { min-height: 88px; }
+    .brand { letter-spacing: .07em; }
+    .nav-links a { transition: color .2s ease; }
+    .nav-links a:hover { color: #7885b4; }
+    .button { border-radius: 999px; padding: 14px 23px; box-shadow: 0 9px 22px rgba(90,103,153,.16); }
+    .button-outline { border-color: #cfd3e5; box-shadow: none; }
+    .button-gold { background: #d9d1ed; border-color: #d9d1ed; }
+    .hero { padding: clamp(64px,8vw,112px) 0; background: radial-gradient(ellipse at 78% 30%,rgba(222,228,250,.85),transparent 39%),linear-gradient(135deg,#f7f7fb 0%,#f0f2fa 56%,#eceef8 100%); overflow: hidden; }
+    .hero::before { content: ''; position: absolute; width: 580px; height: 580px; border: 1px solid rgba(111,124,174,.12); border-radius: 50%; right: -180px; top: -200px; box-shadow: 0 0 0 42px rgba(255,255,255,.18),0 0 0 84px rgba(111,124,174,.035); z-index: -1; }
+    .hero-grid { gap: clamp(34px,6vw,86px); }
+    .hero h1 { font-size: clamp(2.8rem,6vw,5.2rem); line-height: 1.04; letter-spacing: -.055em; }
+    .hero h1 span { color: #7783b0; }
+    .eyebrow { color: #7783b0; letter-spacing: .2em; }
+    .hero-copy { color: #656c85; max-width: 570px; }
+    .hero-photo-wrap { transform: perspective(1300px) rotateX(var(--tilt-y, 0deg)) rotateY(var(--tilt-x, -5deg)); transition: transform .2s ease-out; }
+    .hero-photo { min-height: 470px; height: 100%; border-radius: 34px; border: 1px solid rgba(255,255,255,.8); background: radial-gradient(ellipse at 50% 48%,#fff 0,#edf0fb 38%,#dfe4f5 75%,#d5dbef 100%); box-shadow: 0 35px 85px rgba(59,68,113,.2), inset 0 1px 0 rgba(255,255,255,.95); transform: translateZ(24px); }
+    .photo-placeholder { position: relative; min-height: 470px; height: 100%; overflow: hidden; border-radius: inherit; background: transparent; }
+    .photo-placeholder::before,.photo-placeholder::after { content: ''; position: absolute; left: 50%; top: 47%; width: 240px; height: 240px; border: 1px solid rgba(103,119,173,.26); border-radius: 50%; transform: translate(-50%,-50%) rotateX(66deg); box-shadow: 0 0 0 24px rgba(255,255,255,.16),0 0 0 52px rgba(107,122,175,.05); }
+    .photo-placeholder::after { width: 330px; height: 330px; transform: translate(-50%,-50%) rotateY(64deg) rotateX(62deg); border-color: rgba(255,255,255,.85); }
+    .photo-placeholder > div { position: relative; z-index: 1; }
+    .photo-placeholder h2 { font-size: clamp(1.6rem,3vw,2.35rem); margin: 14px 0 4px; }
+    .photo-note { display: none; }
+    .hero-badge { left: -22px; bottom: 26px; border-left: 0; border-radius: 16px; background: rgba(255,255,255,.78); backdrop-filter: blur(18px); box-shadow: 0 18px 48px rgba(43,49,83,.14); }
+    .section { padding: clamp(68px,8vw,108px) 0; }
+    .section-heading { margin-bottom: 48px; }
+    .section-heading h2,.department-banner h2 { font-size: clamp(2rem,4vw,3.15rem); letter-spacing: -.045em; }
+    .intro-grid { gap: 20px; }
+    .trust-card,.service-card,.contact-panel,.form-panel { border-radius: 22px; border-color: rgba(220,223,237,.9); box-shadow: 0 12px 34px rgba(43,49,83,.055); }
+    .trust-card { padding: 28px; background: rgba(255,255,255,.78); }
+    .dental-section { background: linear-gradient(180deg,#f6f7fb,#f1f2f8); }
+    .aesthetic-section { background: linear-gradient(180deg,#f5f2fa,#faf9fc); }
+    .department-banner { border-radius: 26px; padding: clamp(25px,4vw,42px); background: rgba(255,255,255,.76); backdrop-filter: blur(14px); box-shadow: 0 14px 36px rgba(43,49,83,.05); }
+    .category-title { color: #3b4263; font-size: clamp(1.15rem,2vw,1.45rem); margin-top: 44px; }
+    .service-card { padding: 25px; background: rgba(255,255,255,.86); }
+    .service-card:hover { transform: perspective(900px) translateY(-8px) rotateX(2deg) rotateY(-1deg); box-shadow: 0 24px 52px rgba(54,63,112,.13); }
+    .about-grid { gap: 54px; }
+    details { border-radius: 16px; border-color: #e1e4ef; box-shadow: 0 7px 20px rgba(43,49,83,.035); }
+    .contact-panel,.form-panel { padding: clamp(24px,4vw,38px); }
+    .form-panel input,.form-panel select,.form-panel textarea { border-radius: 12px; border-color: #dfe2ee; background: #fcfcfe; }
+    .form-panel input:focus,.form-panel select:focus,.form-panel textarea:focus { outline-color: #d6dcf1; border-color: #8793bd; }
+    footer { background: linear-gradient(135deg,#252b49,#3b4268); }
+    @media (max-width: 900px) { .hero-photo-wrap { transform: none; } .hero-photo,.photo-placeholder { min-height: 360px; } }
+    @media (prefers-reduced-motion: reduce) { .photo-placeholder .symbol { animation: none; } .hero-photo-wrap { transition: none; } }
+
+    /* Keep the clinic logo large and beside the brand text in the header. */
+    .brand.brand-lockup {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .brand.brand-lockup > img {
+      width: 72px;
+      height: 72px;
+      flex: 0 0 auto;
+      border-radius: 12px;
+    }
+    .brand.brand-lockup > span { display: block; }
+    @media (max-width: 580px) {
+      .brand.brand-lockup { gap: 10px; }
+      .brand.brand-lockup > img { width: 54px; height: 54px; }
+    }
+    .language-picker { padding: 8px 10px; border: 1px solid var(--border); border-radius: 8px; background: #fff; color: var(--deep-teal); }
+    @media (max-width: 760px) { .language-picker { margin-left: auto; max-width: 130px; } }
+  </style>
+</head>
+
+<body>
+  <!-- HEADER: clinic name and navigation links -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="brand brand-lockup" href="#home" aria-label="PARIKSHIT CLINIC home">
+        <img src="[BASE64_IMAGE]" alt="PARIKSHIT CLINIC 3D dental implant logo">
+        
+        <span><span class="brand-name">PARIKSHIT CLINIC</span><small class="brand-tagline">DENTAL &amp; FACIAL AESTHETICS</small></span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navLinks">
+        ☰ Menu
+      </button>
+      <select class="language-picker" id="languagePicker" aria-label="Choose language"><option value="en">English</option><option value="hi">हिन्दी</option><option value="gu">ગુજરાતી</option></select>
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#dental">Dental Treatments</a>
+        <a href="#aesthetics">Facial Aesthetics</a>
+        <a href="#about">About Doctor</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HOME -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Welcome to PARIKSHIT CLINIC</p>
+          <h1>Healthy Smiles.<br><span>Confident You.</span></h1>
+          <p class="hero-copy">
+            Dental, periodontal and facial aesthetic care with a focus on individual needs,
+            thoughtful assessment and patient comfort.
+          </p>
+          <div class="hero-actions">
+            <a class="button" href="#contact">Request an Appointment</a>
+            <a class="button button-outline" href="#services">Explore Treatments</a>
+          </div>
+          <p class="doctor-line"><strong>Dr. Jinal Parmar</strong><br>
+            BDS · MDS (Periodontist) · FFAC</p>
+        </div>
+
+        <div class="hero-photo-wrap">
+          <div class="hero-photo">
+            <!-- Replace this placeholder with a real clinic photo if desired. -->
+            <div class="photo-placeholder">
+              <div>
+                
+                <h2>Your Care, Our Priority</h2>
+                <p>Dental health &amp; facial aesthetics</p>
+                <p class="photo-note">Modern dentistry, delivered with calm and care.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Our Clinical Services</p>
+          <h2>Care Designed for Your Needs</h2>
+          <p class="muted">Explore our two departments and contact us about the services you are interested in.</p>
+        </div>
+        <div class="intro-grid">
+          <div class="trust-card"><strong>Dental &amp; Periodontal Care</strong><p>Preventive, gum, restorative and implant-related services.</p></div>
+          <div class="trust-card"><strong>Facial Aesthetics</strong><p>Selected skin, facial and hair-related cosmetic services.</p></div>
+          <div class="trust-card"><strong>Individual Assessment</strong><p>Discuss suitability, risks and options before choosing a treatment.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DENTAL DEPARTMENT -->
+    <section class="section dental-section" id="dental">
+      <div class="container">
+        <div class="department-banner">
+          <p class="eyebrow">Department One</p>
+          <h2>Dental Treatments</h2>
+          <p>Preventive and periodontal care, root canal and pulp treatments, orthodontics, restorative treatments, dental implants, and cosmetic dental procedures.</p>
+        </div>
+
+        <h3 class="category-title">Preventive &amp; General Care</h3>
+        <div class="service-grid">
+          <article class="service-card"><h4>Routine Exams</h4><p>Clinical dental evaluations and digital X-rays when indicated.<br><span class="treatment-detail">Your dentist will review your concerns and relevant dental history, examine your mouth, and explain findings. X-rays are considered only when clinically needed.</span></p></article>
+          <article class="service-card"><h4>Teeth Cleanings</h4><p>Professional removal of debris, calculus, and surface stains, followed by polishing of the teeth.<br><span class="treatment-detail">The visit can include a gum-health review and home-care advice. Your clinician will explain what is recommended for your needs.</span></p></article>
+          <article class="service-card"><h4>Dental Fillings</h4><p>Tooth-coloured composite restorations.<br><span class="treatment-detail">After examining the tooth, your dentist can explain suitable filling materials, the steps involved, and expected aftercare.</span></p></article>
+        </div>
+
+        <h3 class="category-title">Endodontic &amp; Pulp Therapy</h3>
+        <div class="service-grid">
+          <article class="service-card"><h4>Root Canal Treatment</h4><p>Treatment for infection or damage involving the pulp inside a tooth.<br><span class="treatment-detail">The dentist will assess the tooth, discuss alternatives and explain the treatment stages. Several visits or a final restoration may be needed, depending on the case.</span></p></article>
+          <article class="service-card"><h4>Pulpectomy</h4><p>Pulp treatment specially designed for selected deciduous (primary/baby) teeth.<br><span class="treatment-detail">The dentist will assess whether the tooth can be restored, discuss suitable alternatives, and explain the expected follow-up.</span></p></article>
+        </div>
+
+        <h3 class="category-title">Advanced Periodontal Therapy</h3>
+        <div class="service-grid">
+          <article class="service-card"><h4>Flap Surgery</h4><p>Periodontal pocket reduction and access for treatment of affected tissues.<br><span class="treatment-detail">A periodontal assessment determines whether this approach is appropriate; the clinician discusses alternatives, recovery, and follow-up.</span></p></article>
+          <article class="service-card"><h4>Gingivectomy</h4><p>Surgical reshaping or removal of excess gum tissue when indicated.<br><span class="treatment-detail">A consultation reviews gum health and the reason for reshaping; the clinician explains the proposed approach and healing.</span></p></article>
+          <article class="service-card"><h4>Frenectomy</h4><p>Release of restricted muscle attachments when clinically appropriate.<br><span class="treatment-detail">Assessment considers the attachment and related concerns; the clinician explains whether release or another approach may be appropriate.</span></p></article>
+          <article class="service-card"><h4>Local Drug Delivery</h4><p>Targeted antimicrobial application in selected periodontal pockets.<br><span class="treatment-detail">This may be discussed as part of a wider periodontal plan; the clinician explains the medicine, application, and follow-up.</span></p></article>
+          <article class="service-card"><h4>Non-surgical Periodontal Therapy</h4><p>Scaling and root planing to manage periodontal disease.<br><span class="treatment-detail">The plan depends on gum measurements and findings; your clinician reviews home-care steps and maintenance visits.</span></p></article>
+        </div>
+
+        <h3 class="category-title">Regenerative &amp; Reconstructive Surgery</h3>
+        <div class="service-grid">
+          <article class="service-card"><h4>Regenerative Surgery</h4><p>Selected regenerative techniques and bone grafting to support tissue repair.<br><span class="treatment-detail">A specialist evaluates the site and explains whether regenerative methods may be considered, along with alternatives and recovery.</span></p></article>
+          <article class="service-card"><h4>Ostectomy</h4><p>Surgical bone contouring to reshape supporting structures when indicated.<br><span class="treatment-detail">Your clinician discusses the reason for bone contouring, nearby structures, the planned steps, and follow-up.</span></p></article>
+          <article class="service-card"><h4>Ridge Augmentation</h4><p>Procedures to restore jawbone width or height in suitable cases.<br><span class="treatment-detail">Assessment considers jawbone shape and future restoration goals; options, healing time, and alternatives are reviewed.</span></p></article>
+        </div>
+
+        <h3 class="category-title">Plastic &amp; Cosmetic Dentistry</h3>
+        <div class="service-grid">
+          <article class="service-card"><h4>Periodontal Plastic Surgery</h4><p>Gum procedures to address selected functional or aesthetic concerns.<br><span class="treatment-detail">Consultation explores gum health, functional or aesthetic goals, available approaches, and expected healing.</span></p></article>
+          <article class="service-card"><h4>Smile Makeovers</h4><p>Individualised smile assessment and aesthetic treatment planning.<br><span class="treatment-detail">Planning starts with your goals and an oral-health assessment; the dentist explains possible sequences, options, and limitations.</span></p></article>
+          <article class="service-card"><h4>Porcelain Veneers</h4><p>Custom-made shells to improve the appearance of suitable teeth.<br><span class="treatment-detail">Your dentist reviews tooth condition and bite, discusses alternatives and preparation, and explains care and maintenance.</span></p></article>
+          <article class="service-card"><h4>Teeth Whitening</h4><p>Professional whitening options following a suitability assessment.<br><span class="treatment-detail">Assessment checks tooth and gum health and existing restorations; your dentist discusses suitable options and possible sensitivity.</span></p></article>
+        </div>
+
+        <h3 class="category-title">Implantology &amp; Restorative Care</h3>
+        <div class="service-grid">
+          <article class="service-card"><h4>Dental Implants</h4><p>Implant-based tooth replacement following clinical assessment.<br><span class="treatment-detail">Consultation reviews oral health and bone, any imaging needed, alternatives, stages, timing, risks, and maintenance.</span></p></article>
+          <article class="service-card"><h4>Crowns &amp; Bridges</h4><p>Restorations using suitable ceramic, zirconia or other materials.<br><span class="treatment-detail">The dentist evaluates the teeth and bite, then discusses restoration materials, preparation, expected visits, and care.</span></p></article>
+          <article class="service-card"><h4>Mouth Reconstruction</h4><p>Comprehensive restorative planning, including implant-supported rehabilitation when appropriate.<br><span class="treatment-detail">A staged plan may combine services based on examination findings; the dentist explains sequence, alternatives, timelines, and maintenance.</span></p></article>
+        </div>
+
+        <h3 class="category-title">Specialized Dental Care</h3>
+        <div class="service-grid">
+          <article class="service-card"><h4>Pediatric Dentistry</h4><p>Dental assessment and care tailored to children's needs.<br><span class="treatment-detail">The visit is tailored to a child&#39;s age and needs; the team can explain the planned assessment, preventive advice, and next steps.</span></p></article>
+          <article class="service-card"><h4>Emergency Dentistry</h4><p>Assessment of urgent dental pain, injury and other dental concerns.<br><span class="treatment-detail">Call the clinic to discuss urgent symptoms and current availability; an examination helps determine next steps and whether referral is needed.</span></p></article>
+          <article class="service-card"><h4>Orthodontic Treatment</h4><p>Assessment and planning for tooth alignment and bite concerns.<br><span class="treatment-detail">Options may include braces or other clinician-guided appliances. The approach, timing, and follow-up depend on an orthodontic assessment.</span></p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FACIAL AESTHETICS DEPARTMENT -->
+    <section class="section aesthetic-section" id="aesthetics">
+      <div class="container">
+        <div class="department-banner">
+          <p class="eyebrow">Department Two</p>
+          <h2>Facial Aesthetics &amp; Cosmetic Treatments</h2>
+          <p>Skin, facial rejuvenation, hair restoration and cosmetic services. Treatment suitability depends on assessment and applicable professional requirements.</p>
+        </div>
+
+        <div class="service-grid">
+          <article class="service-card"><h4>Mole Removal</h4><p>Assessment of the lesion and appropriate options where indicated.<br><span class="treatment-detail">Consultation reviews the area and whether assessment by another specialist is needed; suitable options and healing are discussed.</span></p></article>
+          <article class="service-card"><h4>Freckle Removal</h4><p>Assessment of pigmentation and suitable cosmetic treatment options.<br><span class="treatment-detail">Consultation considers pigmentation, skin type, and medical history; available options, aftercare, and variable results are discussed.</span></p></article>
+          <article class="service-card"><h4>Eyelid Xanthelasma Removal</h4><p>Assessment of cholesterol deposits around the eyelids and appropriate treatment or referral.<br><span class="treatment-detail">The clinician assesses the eyelid area and suitability, and may recommend medical assessment or referral before cosmetic treatment.</span></p></article>
+          <article class="service-card"><h4>Ozone High-Frequency Facial</h4><p>Facial treatment incorporating high-frequency equipment and an LED mask, according to the protocol offered.<br><span class="treatment-detail">The clinic can explain its exact protocol, equipment, suitability screening, risks, and aftercare during consultation.</span></p></article>
+          <article class="service-card"><h4>Plasma Skin Tightening</h4><p>Skin-tightening treatment assessment and discussion of suitable options.<br><span class="treatment-detail">Consultation covers the device and technique used, skin suitability, risks, aftercare, and other available options.</span></p></article>
+          <article class="service-card"><h4>Chemical Peel</h4><p>Skin exfoliation treatment selected according to skin type and concerns.<br><span class="treatment-detail">Selection considers skin type, concern, and history; the clinician explains preparation, aftercare, recovery, and possible reactions.</span></p></article>
+          <article class="service-card"><h4>HydraFacial Treatment</h4><p>Facial cleansing, exfoliation and hydration according to the protocol offered.<br><span class="treatment-detail">The clinic can explain the products and steps included, suitability, possible reactions, and aftercare for your skin.</span></p></article>
+          <article class="service-card"><h4>Vampire Facial (Microneedling)</h4><p>Microneedling-based facial treatment; confirm the exact protocol offered at the clinic.<br><span class="treatment-detail">Consultation explains whether microneedling or PRP is included, the exact protocol, suitability, risks, recovery, and aftercare.</span></p></article>
+          <article class="service-card"><h4>Face PRP Treatment</h4><p>Facial platelet-rich plasma treatment following a suitability assessment.<br><span class="treatment-detail">The practitioner explains the preparation and application process, suitability, alternatives, risks, and aftercare.</span></p></article>
+          <article class="service-card"><h4>Hair PRP Treatment</h4><p>Scalp PRP treatment assessment for selected hair-related concerns.<br><span class="treatment-detail">Consultation reviews scalp concerns and alternatives, and explains the protocol, follow-up, expected course, and limits.</span></p></article>
+          <article class="service-card"><h4>Permanent Hair Reduction</h4><p>Hair reduction treatment using the technology available at the clinic. Results vary by individual.<br><span class="treatment-detail">The clinician discusses the device used, skin and hair characteristics, preparation, likely treatment schedule, and variable results.</span></p></article>
+          <article class="service-card"><h4>Permanent Eyebrow Microblading</h4><p>Cosmetic eyebrow enhancement using a microblading technique.<br><span class="treatment-detail">Consultation covers brow design, pigment, hygiene, healing, aftercare, touch-up planning, and suitability.</span></p></article>
+        </div>
+
+        <p class="clinical-note">Treatment availability, eligibility, risks and expected outcomes should be discussed during consultation. Please confirm that each advertised procedure is within your qualifications, applicable local regulations and actual clinic offerings.</p>
+      </div>
+    </section>
+
+    <!-- DOCTOR PROFILE -->
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <div>
+          <p class="eyebrow">Meet Your Doctor</p>
+          <h2>Dr. Jinal Parmar</h2>
+          <p class="muted">Dental, periodontal and facial aesthetic care</p>
+          <ul class="qualifications">
+            <li><strong>BDS</strong> — Bachelor of Dental Surgery</li>
+            <li><strong>MDS (Periodontist)</strong> — Master of Dental Surgery in Periodontology</li>
+            <li><strong>FFAC</strong> — Fellowship in Facial Aesthetics and Cosmetology</li>
+          </ul>
+          <p>At PARIKSHIT CLINIC, the aim is to provide a welcoming environment where patients can discuss their dental and aesthetic concerns, understand suitable options and make informed decisions about their care.</p>
+          <a class="button" href="#contact">Contact the Clinic</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq-section" id="faq">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Patient Information</p>
+          <h2>Frequently Asked Questions</h2>
+          <p class="muted">Helpful information before your visit.</p>
+        </div>
+        <div class="faq-list">
+          <details><summary>How do I book an appointment?</summary><p>Choose a preferred date and time. The clinic will contact you to confirm availability.</p></details>
+          <details><summary>How do I know which treatment is suitable for me?</summary><p>Suitability depends on individual assessment. Your practitioner can discuss potential benefits, risks and alternatives.</p></details>
+          <details><summary>Can I ask about both dental and facial aesthetic services?</summary><p>Yes. Choose the relevant department in the appointment form, or send a separate request for each service.</p></details>
+          <details><summary>Are treatment results guaranteed?</summary><p>No procedure can guarantee a particular outcome. Results and recovery vary depending on the treatment and individual circumstances.</p></details>
+                  <details><summary>What happens at my first appointment?</summary><p>We will ask about your concerns and relevant history, examine as needed, and discuss any findings and options. Any treatment plan is individual.</p></details>
+          <details><summary>Should I bring anything to my visit?</summary><p>If available, bring relevant previous dental records or imaging and a current list of medicines and allergies. Call the clinic if you are unsure what is needed.</p></details>
+          <details><summary>How long will my appointment take?</summary><p>Visit length depends on the reason for your appointment and whether assessment or treatment is planned. Contact the clinic to confirm an expected duration.</p></details>
+          <details><summary>Can I walk in without an appointment?</summary><p>Please call or WhatsApp first to check current availability, especially for urgent concerns.</p></details>
+          <details><summary>How can I change or cancel an appointment?</summary><p>Contact the clinic by phone or WhatsApp as early as possible. The team can explain the current rescheduling policy.</p></details>
+          <details><summary>How much will my treatment cost?</summary><p>Fees depend on your assessment and the treatment plan. Ask the clinic for an estimate and discuss options before proceeding.</p></details>
+          <details><summary>Do you provide dental check-ups for children?</summary><p>Yes. Pediatric dental assessments and care are listed among the clinic's services. Contact the clinic to confirm age suitability, appointment availability, and any preparation needed.</p></details>
+          <details><summary>What happens during a facial aesthetics consultation?</summary><p>You can discuss your goals and relevant health history. The practitioner should explain suitable options, potential risks, alternatives, and aftercare before you decide.</p></details>
+          <details><summary>How should I prepare for a treatment?</summary><p>Preparation varies by treatment. Follow the instructions provided by your clinician and ask them about medicines or health conditions; do not change prescribed medicines without professional guidance.</p></details>
+          <details><summary>What should I do if I have an urgent dental concern?</summary><p>Call the clinic to describe the concern and check availability. For a serious medical emergency, seek urgent local medical care.</p></details></div>
+      </div>
+    </section>
+
+    <!-- CONTACT DETAILS AND APPOINTMENT REQUEST -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Get in Touch</p>
+          <h2>Contact PARIKSHIT CLINIC</h2>
+          <p class="muted">Contact us to ask about our services or request an appointment.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-panel">
+            <h3>Clinic Information</h3>
+            <div class="contact-item">
+              <strong>Address</strong>
+              <p>14, Ground Floor, Siddharth Elegance Complex,<br>Near SBI Bank, Old Chhani Road,<br>Vadodara – 390024, Gujarat, India</p>
+            </div>
+            <div class="contact-item">
+              <strong>Phone / WhatsApp</strong>
+              <p><a href="tel:+917016292613">+91 70162 92613</a><br><a href="tel:+919879610179">+91 98796 10179</a></p>
+            </div>
+            <div class="contact-item">
+              <strong>Email</strong>
+              <p><a href="mailto:parikshitclinic20@gmail.com">parikshitclinic20@gmail.com</a></p>
+            </div>
+            <div class="contact-item">
+              <strong>Clinic Hours</strong>
+              <p>10:00 AM–1:00 PM<br>5:00 PM–8:00 PM</p>
+            </div>
+            <div class="contact-links">
+              <a class="button" href="https://wa.me/917016292613?text=Hello%20PARIKSHIT%20CLINIC%2C%20I%20would%20like%20to%20request%20an%20appointment." target="_blank" rel="noopener noreferrer">WhatsApp Us</a>
+              <a class="button button-outline" href="tel:+917016292613">Call Clinic</a>
+            </div>
+            <p class="form-help">Please confirm availability before visiting. Do not send sensitive medical information through an unsecured message.</p>
+          </div>
+
+          <div class="form-panel">
+            <h3>Book an Appointment</h3>
+            <p class="muted">Request a preferred date and time. The clinic will contact you to confirm availability.</p>
+            <form id="appointmentForm">
+              <div class="form-row">
+                <div><label for="patientName">Your Name *</label><input id="patientName" name="patientName" type="text" autocomplete="name" required maxlength="100"></div>
+                <div><label for="patientPhone">Mobile Number *</label><input id="patientPhone" name="patientPhone" type="tel" autocomplete="tel" required maxlength="20"></div>
+              </div>
+              <div class="form-row">
+                <div><label for="patientAge">Age *</label><input id="patientAge" name="age" type="number" min="1" max="120" step="1" inputmode="numeric" required placeholder="e.g. 30"></div>
+                <div><label for="patientCity">City *</label><input id="patientCity" name="city" type="text" autocomplete="address-level2" maxlength="80" required placeholder="e.g. Vadodara"></div>
+              </div>
+              <label for="department">Department *</label>
+              <select id="department" name="department" required><option value="">Choose a department</option><option value="Dental Treatments">Dental Treatments</option><option value="Facial Aesthetics &amp; Cosmetic Treatments">Facial Aesthetics &amp; Cosmetic Treatments</option></select>
+              <label for="treatment">Treatment / reason for visit</label>
+              <input id="treatment" name="treatment" type="text" maxlength="120" placeholder="e.g. Dental check-up or Hydra Facial">
+              <label for="preferredDate">Appointment date *</label><input id="preferredDate" name="preferredDate" type="date" required>
+              <label for="preferredTime">Choose a 30-minute time slot *</label>
+              <select id="preferredTime" name="preferredTime" required>
+                <option value="">Choose a time</option>
+                <optgroup label="Morning">
+                  <option value="10:00">10:00 AM</option><option value="10:30">10:30 AM</option>
+                  <option value="11:00">11:00 AM</option><option value="11:30">11:30 AM</option>
+                  <option value="12:00">12:00 PM</option><option value="12:30">12:30 PM</option>
+                </optgroup>
+                <optgroup label="Evening">
+                  <option value="17:00">5:00 PM</option><option value="17:30">5:30 PM</option>
+                  <option value="18:00">6:00 PM</option><option value="18:30">6:30 PM</option>
+                  <option value="19:00">7:00 PM</option><option value="19:30">7:30 PM</option>
+                </optgroup>
+              </select>
+              <p class="form-help">Each slot is 30 minutes. The clinic will contact you to confirm availability.</p>
+              
+              <button class="button" id="bookButton" type="submit">Book Appointment</button>
+              <p class="form-help">Your request remains pending until the clinic confirms it.</p><p class="status" id="formStatus" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="brand-lockup"><img src="[BASE64_IMAGE]" alt="PARIKSHIT CLINIC logo"><span><span class="brand-name">PARIKSHIT CLINIC</span><span class="brand-tagline">Dental · Periodontics · Facial Aesthetics</span></span></div>
+      <p>Dental Care · Periodontics · Facial Aesthetics</p>
+      <p>Dr. Jinal Parmar | Vadodara, Gujarat</p>
+      <p>© <span id="year"></span> PARIKSHIT CLINIC. All rights reserved.</p>
+      <p class="footer-note">Website information is for general educational purposes and is not a substitute for individual professional assessment or advice. Treatment suitability and outcomes vary. Confirm all advertised services, credentials and legal requirements before publishing.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script>
+    // Browser-safe publishable key. Row Level Security must protect table access.
+    window.supabaseClient = window.supabase.createClient(
+      "https://csygqddvuaivkraxorth.supabase.co",
+      "sb_publishable_jVz32GHQxRc5Wi70VlicFg_FRNTIQdO"
+    );
+  </script>
+
+  <script>
+    // 1. MOBILE MENU: show or hide navigation on smaller screens.
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", function () {
+      const isOpen = navLinks.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", isOpen);
+      menuToggle.textContent = isOpen ? "✕ Close" : "☰ Menu";
+    });
+
+    // Close the mobile menu after the visitor selects a link.
+    document.querySelectorAll("#navLinks a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        navLinks.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.textContent = "☰ Menu";
+      });
+    });
+
+    // 2. COPYRIGHT YEAR: update it automatically every year.
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // 3. APPOINTMENT REQUESTS: save a pending request in Supabase.
+    const dateInput = document.getElementById("preferredDate");
+    const timeInput = document.getElementById("preferredTime");
+    const formStatus = document.getElementById("formStatus");
+    const bookButton = document.getElementById("bookButton");
+    dateInput.min = new Date().toLocaleDateString("en-CA");
+
+    document.getElementById("appointmentForm").addEventListener("submit", async function (event) {
+      event.preventDefault();
+      const payload = {
+        patient_name: document.getElementById("patientName").value.trim(),
+        phone: document.getElementById("patientPhone").value.trim(),
+        age: Number(document.getElementById("patientAge").value),
+        city: document.getElementById("patientCity").value.trim(),
+        department: document.getElementById("department").value,
+        treatment: document.getElementById("treatment").value.trim() || null,
+        appointment_date: dateInput.value,
+        appointment_time: timeInput.value,
+        status: "pending"
+      };
+      if (!payload.patient_name || !payload.phone || !payload.age || !payload.city || !payload.department || !payload.appointment_date || !payload.appointment_time) {
+        formStatus.textContent = "Please complete all required fields.";
+        return;
+      }
+      bookButton.disabled = true;
+      bookButton.textContent = "Sending request…";
+      try {
+        const { error } = await window.supabaseClient.from("appointments").insert(payload);
+        if (error) throw error;
+        formStatus.textContent = "Appointment request sent. The clinic will contact you to confirm the time.";
+        document.getElementById("appointmentForm").reset();
+        dateInput.min = new Date().toLocaleDateString("en-CA");
+      } catch (error) {
+        console.error("Appointment request failed:", error);
+        formStatus.textContent = error && error.code === "23505"
+          ? "That time was just requested by someone else. Please choose another time or call the clinic."
+          : "We couldn't send your request. Please call +91 70162 92613.";
+      } finally {
+        bookButton.disabled = false;
+        bookButton.textContent = "Book Appointment";
+      }
+    });
+    // Progressive reveal and expandable service panels (no libraries required).
+    const revealTargets = document.querySelectorAll(".section-heading, .department-banner, .trust-card, .service-card, .about-grid, .faq-list, .contact-panel, .form-panel");
+    if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      revealTargets.forEach(function (item) { item.classList.add("reveal"); });
+      const revealObserver = new IntersectionObserver(function (entries, observer) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) { entry.target.classList.add("is-visible"); observer.unobserve(entry.target); }
+        });
+      }, { threshold: 0.12 });
+      revealTargets.forEach(function (item) { revealObserver.observe(item); });
+    }
+    document.querySelectorAll(".service-card").forEach(function (card) {
+      card.setAttribute("tabindex", "0");
+      card.setAttribute("role", "button");
+      card.setAttribute("aria-expanded", "false");
+      function toggleCard() {
+        const expanded = card.classList.toggle("is-expanded");
+        card.setAttribute("aria-expanded", String(expanded));
+      }
+      card.addEventListener("click", toggleCard);
+      card.addEventListener("keydown", function (event) {
+        if (event.key === "Enter" || event.key === " ") { event.preventDefault(); toggleCard(); }
+      });
+    });
+
+    // Subtle 3D pointer tilt on the hero card; disabled for touch and reduced motion.
+    const heroDepthCard = document.querySelector(".hero-photo-wrap");
+    if (heroDepthCard && window.matchMedia("(hover: hover) and (pointer: fine)").matches && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      heroDepthCard.addEventListener("pointermove", function (event) {
+        const bounds = heroDepthCard.getBoundingClientRect();
+        const x = (event.clientX - bounds.left) / bounds.width - 0.5;
+        const y = (event.clientY - bounds.top) / bounds.height - 0.5;
+        heroDepthCard.style.setProperty("--tilt-x", (x * 9) + "deg");
+        heroDepthCard.style.setProperty("--tilt-y", (y * -7) + "deg");
+      });
+      heroDepthCard.addEventListener("pointerleave", function () {
+        heroDepthCard.style.setProperty("--tilt-x", "-5deg");
+        heroDepthCard.style.setProperty("--tilt-y", "0deg");
+      });
+    }
+</script>
+
+  <script>
+    // Simple page language selector. Clinical service descriptions stay in English for now.
+    (function () {
+      const translations = {
+        hi: {
+          "Home":"होम", "Dental Treatments":"दंत उपचार", "Facial Aesthetics":"फेशियल एस्थेटिक्स", "About Doctor":"डॉक्टर के बारे में", "Contact":"संपर्क",
+          "Welcome to PARIKSHIT CLINIC":"PARIKSHIT CLINIC में आपका स्वागत है", "Healthy Smiles.":"स्वस्थ मुस्कान।", "Confident You.":"आत्मविश्वास से भरपूर आप।",
+          "Dental, periodontal and facial aesthetic care with a focus on individual needs, thoughtful assessment and patient comfort.":"व्यक्तिगत ज़रूरतों, सावधानीपूर्वक जाँच और आराम को ध्यान में रखकर दंत, मसूड़ों और फेशियल एस्थेटिक्स की देखभाल।",
+          "Request an Appointment":"अपॉइंटमेंट का अनुरोध करें", "Explore Treatments":"उपचार देखें", "Your Care, Our Priority":"आपकी देखभाल, हमारी प्राथमिकता", "Dental health & facial aesthetics":"दंत स्वास्थ्य और फेशियल एस्थेटिक्स", "Modern dentistry, delivered with calm and care.":"आधुनिक दंत चिकित्सा, सहजता और देखभाल के साथ।",
+          "Our Clinical Services":"हमारी क्लिनिकल सेवाएँ", "Care Designed for Your Needs":"आपकी ज़रूरतों के अनुसार देखभाल", "Explore our two departments and contact us about the services you are interested in.":"हमारे दोनों विभाग देखें और अपनी रुचि की सेवाओं के बारे में संपर्क करें।",
+          "Get in Touch":"संपर्क करें", "Contact PARIKSHIT CLINIC":"PARIKSHIT CLINIC से संपर्क करें", "Contact us to ask about our services or request an appointment.":"हमारी सेवाओं के बारे में पूछने या अपॉइंटमेंट का अनुरोध करने के लिए संपर्क करें।",
+          "Clinic Information":"क्लिनिक की जानकारी", "Address":"पता", "Phone / WhatsApp":"फोन / WhatsApp", "Email":"ईमेल", "Clinic Hours":"क्लिनिक का समय", "WhatsApp Us":"WhatsApp करें", "Call Clinic":"क्लिनिक को कॉल करें",
+          "Please confirm availability before visiting. Do not send sensitive medical information through an unsecured message.":"आने से पहले उपलब्धता की पुष्टि करें। असुरक्षित संदेश में संवेदनशील चिकित्सा जानकारी न भेजें।",
+          "Book an Appointment":"अपॉइंटमेंट बुक करें", "Request a preferred date and time. The clinic will contact you to confirm availability.":"अपनी पसंद की तारीख और समय का अनुरोध करें। उपलब्धता की पुष्टि के लिए क्लिनिक आपसे संपर्क करेगा।",
+          "Your Name *":"आपका नाम *", "Mobile Number *":"मोबाइल नंबर *", "Age *":"उम्र *", "City *":"शहर *", "Choose a department":"विभाग चुनें", "Dental Treatments":"दंत उपचार", "Facial Aesthetics & Cosmetic Treatments":"फेशियल एस्थेटिक्स और कॉस्मेटिक उपचार",
+          "Treatment / reason for visit":"उपचार / आने का कारण", "Appointment date *":"अपॉइंटमेंट की तारीख *", "Choose a 30-minute time slot *":"30 मिनट का समय चुनें *", "Choose a time":"समय चुनें", "Morning":"सुबह", "Evening":"शाम",
+          "Each slot is 30 minutes. The clinic will contact you to confirm availability.":"हर स्लॉट 30 मिनट का है। उपलब्धता की पुष्टि के लिए क्लिनिक आपसे संपर्क करेगा।", "Book Appointment":"अपॉइंटमेंट बुक करें", "Your request remains pending until the clinic confirms it.":"क्लिनिक की पुष्टि होने तक आपका अनुरोध लंबित रहेगा।",
+          "Please complete all required fields.":"कृपया सभी ज़रूरी फ़ील्ड भरें।", "Sending request…":"अनुरोध भेजा जा रहा है…", "Appointment request sent. The clinic will contact you to confirm the time.":"अपॉइंटमेंट अनुरोध भेज दिया गया है। समय की पुष्टि के लिए क्लिनिक आपसे संपर्क करेगा।", "That time was just requested by someone else. Please choose another time or call the clinic.":"यह समय अभी किसी और ने अनुरोध किया है। कृपया दूसरा समय चुनें या क्लिनिक को कॉल करें।", "We couldn't send your request. Please call +91 70162 92613.":"आपका अनुरोध नहीं भेजा जा सका। कृपया +91 70162 92613 पर कॉल करें।",
+          "Dental Care · Periodontics · Facial Aesthetics":"दंत देखभाल · मसूड़ों का उपचार · फेशियल एस्थेटिक्स", "Dr. Jinal Parmar | Vadodara, Gujarat":"डॉ. जिनल परमार | वडोदरा, गुजरात"
+        },
+        gu: {
+          "Home":"હોમ", "Dental Treatments":"દાંતની સારવાર", "Facial Aesthetics":"ફેશિયલ એસ્થેટિક્સ", "About Doctor":"ડૉક્ટર વિશે", "Contact":"સંપર્ક",
+          "Welcome to PARIKSHIT CLINIC":"PARIKSHIT CLINIC માં આપનું સ્વાગત છે", "Healthy Smiles.":"સ્વસ્થ સ્મિત.", "Confident You.":"આત્મવિશ્વાસથી ભરપૂર તમે.",
+          "Dental, periodontal and facial aesthetic care with a focus on individual needs, thoughtful assessment and patient comfort.":"વ્યક્તિગત જરૂરિયાતો, યોગ્ય તપાસ અને દર્દીના આરામને ધ્યાનમાં રાખીને દાંત, પેઢાં અને ફેશિયલ એસ્થેટિક્સની સંભાળ.",
+          "Request an Appointment":"અપોઇન્ટમેન્ટ માટે વિનંતી કરો", "Explore Treatments":"સારવારો જુઓ", "Your Care, Our Priority":"તમારી સંભાળ, અમારી પ્રાથમિકતા", "Dental health & facial aesthetics":"દાંતનું સ્વાસ્થ્ય અને ફેશિયલ એસ્થેટિક્સ", "Modern dentistry, delivered with calm and care.":"શાંતિ અને કાળજી સાથે આધુનિક દંતચિકિત્સા.",
+          "Our Clinical Services":"અમારી ક્લિનિકલ સેવાઓ", "Care Designed for Your Needs":"તમારી જરૂરિયાત મુજબની સંભાળ", "Explore our two departments and contact us about the services you are interested in.":"અમારા બંને વિભાગો જુઓ અને તમને રસ હોય તેવી સેવાઓ માટે સંપર્ક કરો.",
+          "Get in Touch":"સંપર્ક કરો", "Contact PARIKSHIT CLINIC":"PARIKSHIT CLINIC નો સંપર્ક કરો", "Contact us to ask about our services or request an appointment.":"અમારી સેવાઓ વિશે પૂછવા અથવા અપોઇન્ટમેન્ટ માટે વિનંતી કરવા સંપર્ક કરો.",
+          "Clinic Information":"ક્લિનિકની માહિતી", "Address":"સરનામું", "Phone / WhatsApp":"ફોન / WhatsApp", "Email":"ઈમેલ", "Clinic Hours":"ક્લિનિકનો સમય", "WhatsApp Us":"WhatsApp કરો", "Call Clinic":"ક્લિનિકમાં ફોન કરો",
+          "Please confirm availability before visiting. Do not send sensitive medical information through an unsecured message.":"આવતા પહેલાં ઉપલબ્ધતાની ખાતરી કરો. અસુરક્ષિત સંદેશામાં સંવેદનશીલ તબીબી માહિતી મોકલશો નહીં.",
+          "Book an Appointment":"અપોઇન્ટમેન્ટ બુક કરો", "Request a preferred date and time. The clinic will contact you to confirm availability.":"તમારી પસંદગીની તારીખ અને સમય માટે વિનંતી કરો. ઉપલબ્ધતાની ખાતરી કરવા ક્લિનિક તમારો સંપર્ક કરશે.",
+          "Your Name *":"તમારું નામ *", "Mobile Number *":"મોબાઇલ નંબર *", "Age *":"ઉંમર *", "City *":"શહેર *", "Choose a department":"વિભાગ પસંદ કરો", "Dental Treatments":"દાંતની સારવાર", "Facial Aesthetics & Cosmetic Treatments":"ફેશિયલ એસ્થેટિક્સ અને કોસ્મેટિક સારવાર",
+          "Treatment / reason for visit":"સારવાર / મુલાકાતનું કારણ", "Appointment date *":"અપોઇન્ટમેન્ટની તારીખ *", "Choose a 30-minute time slot *":"30 મિનિટનો સમય પસંદ કરો *", "Choose a time":"સમય પસંદ કરો", "Morning":"સવાર", "Evening":"સાંજ",
+          "Each slot is 30 minutes. The clinic will contact you to confirm availability.":"દરેક સ્લોટ 30 મિનિટનો છે. ઉપલબ્ધતાની ખાતરી કરવા ક્લિનિક તમારો સંપર્ક કરશે.", "Book Appointment":"અપોઇન્ટમેન્ટ બુક કરો", "Your request remains pending until the clinic confirms it.":"ક્લિનિક ખાતરી ન કરે ત્યાં સુધી તમારી વિનંતી પેન્ડિંગ રહેશે.",
+          "Please complete all required fields.":"કૃપા કરીને બધા જરૂરી ખાના भरो.", "Sending request…":"વિનંતી મોકલાઈ રહી છે…", "Appointment request sent. The clinic will contact you to confirm the time.":"અપોઇન્ટમેન્ટની વિનંતી મોકલાઈ છે. સમયની ખાતરી કરવા ક્લિનિક તમારો સંપર્ક કરશે.", "That time was just requested by someone else. Please choose another time or call the clinic.":"આ સમય માટે હમણાં જ બીજા કોઈએ વિનંતી કરી છે. કૃપા કરીને બીજો સમય પસંદ કરો અથવા ક્લિનિકમાં ફોન કરો.", "We couldn't send your request. Please call +91 70162 92613.":"તમારી વિનંતી મોકલી શકાઈ નથી. કૃપા કરીને +91 70162 92613 પર ફોન કરો.",
+          "Dental Care · Periodontics · Facial Aesthetics":"દાંતની સંભાળ · પેઢાંની સારવાર · ફેશિયલ એસ્થેટિક્સ", "Dr. Jinal Parmar | Vadodara, Gujarat":"ડૉ. જિનલ પરમાર | વડોદરા, ગુજરાત"
+        }
+      };
+      const picker = document.getElementById("languagePicker");
+      const original = new WeakMap();
+      function applyLanguage(language) {
+        document.documentElement.lang = language === "hi" ? "hi" : language === "gu" ? "gu" : "en";
+        const dictionary = translations[language] || {};
+        const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+        let node;
+        while ((node = walker.nextNode())) {
+          if (!original.has(node)) original.set(node, node.nodeValue);
+          const current = node.nodeValue.trim().replace(/\s+/g, " ");
+          let source = original.get(node) || "";
+          if (!source.trim()) {
+            source = current;
+            for (const [english, translated] of Object.entries(dictionary)) {
+              if (translated === current) { source = english; break; }
+            }
+            if (source) original.set(node, source);
+          }
+          source = source.trim().replace(/\s+/g, " ");
+          const replacement = language === "en" ? source : (dictionary[source] || source);
+          if (current && replacement !== current) node.nodeValue = node.nodeValue.replace(node.nodeValue.trim(), replacement);
+        }
+        document.querySelectorAll("input[placeholder]").forEach(function (input) {
+          if (!input.dataset.placeholderEn) input.dataset.placeholderEn = input.placeholder;
+          const translated = dictionary[input.dataset.placeholderEn];
+          input.placeholder = language === "en" ? input.dataset.placeholderEn : (translated || input.dataset.placeholderEn);
+        });
+        localStorage.setItem("clinicLanguage", language);
+      }
+      const observer = new MutationObserver(function (changes) {
+        const language = picker.value;
+        const dictionary = translations[language] || {};
+        changes.forEach(function (change) {
+          const nodes = [];
+          if (change.type === "characterData") nodes.push(change.target);
+          change.addedNodes.forEach(function (added) {
+            if (added.nodeType === Node.TEXT_NODE) nodes.push(added);
+            else if (added.nodeType === Node.ELEMENT_NODE) {
+              const walker = document.createTreeWalker(added, NodeFilter.SHOW_TEXT);
+              let item;
+              while ((item = walker.nextNode())) nodes.push(item);
+            }
+          });
+          nodes.forEach(function (node) {
+            const current = node.nodeValue.trim().replace(/\s+/g, " ");
+            if (dictionary[current]) node.nodeValue = node.nodeValue.replace(node.nodeValue.trim(), dictionary[current]);
+          });
+        });
+      });
+      observer.observe(document.body, { subtree: true, childList: true, characterData: true });
+      picker.addEventListener("change", function () { applyLanguage(picker.value); });
+      picker.value = localStorage.getItem("clinicLanguage") || "en";
+      applyLanguage(picker.value);
+    })();
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

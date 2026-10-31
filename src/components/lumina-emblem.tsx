@@ -1,0 +1,73 @@
+import React from "react";
+
+interface LuminaEmblemProps {
+  size?: number;
+  className?: string;
+}
+
+export function LuminaEmblem({ size = 40, className = "" }: LuminaEmblemProps) {
+  return (
+    <svg
+      viewBox="0 0 40 40"
+      width={size}
+      height={size}
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={`shrink-0 ${className}`}
+      aria-hidden="true"
+    >
+      <defs>
+        <linearGradient id="luminaBgGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stopColor="#0e657e" />
+          <stop offset="100%" stopColor="#003842" />
+        </linearGradient>
+        <linearGradient id="luminaToothGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stopColor="#ffffff" />
+          <stop offset="100%" stopColor="#f0f7f9" />
+        </linearGradient>
+        <filter id="luminaDotGlow" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="0.6" />
+          <feMerge>
+            <feMergeNode />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+      </defs>
+
+      {/* Squircle Base with 11px radius */}
+      <rect x="0" y="0" width="40" height="40" rx="11" fill="url(#luminaBgGrad)" />
+
+      {/* Inner Highlight Border for depth */}
+      <rect
+        x="0.5"
+        y="0.5"
+        width="39"
+        height="39"
+        rx="10.5"
+        fill="none"
+        stroke="rgba(255, 255, 255, 0.16)"
+        strokeWidth="1"
+      />
+
+      {/* Anatomical Molar Tooth */}
+      <path
+        d="M20 11.2C18.2 10.3 16 10 14.5 10.5C12.5 11.2 11.2 13 11.2 15.6C11.2 18.2 12.2 21 13.5 23.2C14.3 24.6 14.8 26.8 15.2 28.8C15.4 29.8 16.5 30.5 17.4 30.1C18.2 29.7 18.6 28.7 18.6 27.8C18.6 25.5 19 23.6 20 23.6C21 23.6 21.4 25.5 21.4 27.8C21.4 28.7 21.8 29.7 22.6 30.1C23.5 30.5 24.6 29.8 24.8 28.8C25.2 26.8 25.7 24.6 26.5 23.2C27.8 21 28.8 18.2 28.8 15.6C28.8 13 27.5 11.2 25.5 10.5C24 10 21.8 10.3 20 11.2Z"
+        fill="url(#luminaToothGrad)"
+      />
+
+      {/* Crown Enamel Contour Line */}
+      <path
+        d="M16 14.5C17.5 16 22.5 16 24 14.5"
+        stroke="#d5e8ed"
+        strokeWidth="1.25"
+        strokeLinecap="round"
+      />
+
+      {/* Lumina Radiance Cyan Sparkle on Upper Right Cusp */}
+      <circle cx="26.4" cy="11.6" r="2.7" fill="#38bdf8" filter="url(#luminaDotGlow)" />
+      <circle cx="26.4" cy="11.6" r="1.3" fill="#e0f7fe" />
+    </svg>
+  );
+}
+
+export default LuminaEmblem;
