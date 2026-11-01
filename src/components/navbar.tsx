@@ -93,27 +93,34 @@ export function Navbar() {
           {/* Zone 3: Actions (Right) */}
           <div className="flex items-center gap-3 sm:gap-4 flex-shrink-0">
             {/* Phone link */}
-            <a
+            <motion.a
               href="tel:+917016292613"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.97 }}
+              transition={{ type: "spring", stiffness: 400, damping: 25 }}
               className="text-sm font-medium text-secondary hover:text-primary transition-colors hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full hover:bg-surface-container-low focus:outline-none focus-visible:ring-2 focus-visible:ring-primary whitespace-nowrap"
               aria-label="Call Parikshit Clinic at +91 70162 92613"
             >
               <Phone className="w-4 h-4 text-secondary" aria-hidden="true" />
               <span>+91 70162 92613</span>
-            </a>
+            </motion.a>
 
             {/* Book Appointment CTA */}
-            <a
+            <motion.a
               href="#booking-wizard"
-              className="px-5 sm:px-6 py-2.5 rounded-full bg-primary text-white text-sm font-semibold hover:bg-primary-container hover:text-primary-fixed transition-all shadow-sm flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 whitespace-nowrap"
+              whileHover={{ scale: 1.03, y: -1 }}
+              whileTap={{ scale: 0.96 }}
+              transition={{ type: "spring", stiffness: 400, damping: 25 }}
+              className="px-5 sm:px-6 py-2.5 rounded-full bg-primary text-white text-sm font-semibold hover:bg-primary-container hover:text-primary-fixed transition-colors shadow-sm flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 whitespace-nowrap"
             >
               <Calendar className="w-4 h-4" aria-hidden="true" />
               <span>Book Appointment</span>
-            </a>
+            </motion.a>
 
             {/* Mobile Menu Button */}
-            <button
+            <motion.button
               type="button"
+              whileTap={{ scale: 0.92 }}
               onClick={() => setIsOpen(true)}
               className="lg:hidden p-2 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
               aria-label="Open navigation menu"
@@ -121,7 +128,7 @@ export function Navbar() {
               aria-controls="mobile-drawer"
             >
               <Menu className="w-6 h-6" aria-hidden="true" />
-            </button>
+            </motion.button>
           </div>
         </div>
       </div>

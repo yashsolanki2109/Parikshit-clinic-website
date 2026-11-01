@@ -1,4 +1,7 @@
+"use client";
+
 import React from "react";
+import { motion } from "motion/react";
 import {
   ShieldCheck,
   Sparkles,
@@ -106,15 +109,19 @@ export function Services() {
           {SERVICES.map((service, index) => {
             const Icon = service.icon;
             return (
-              <div
+              <motion.div
                 key={index}
-                className="group relative bg-surface-container-lowest rounded-2xl p-6 sm:p-8 border border-surface-container-highest/80 shadow-xs hover:shadow-xl hover:border-primary/25 transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between"
+                whileHover={{ y: -4, scale: 1.01 }}
+                whileTap={{ scale: 0.99 }}
+                transition={{ type: "spring", stiffness: 350, damping: 25 }}
+                className="group relative bg-surface-container-lowest rounded-2xl p-6 sm:p-8 border border-surface-container-highest/80 shadow-xs hover:shadow-xl hover:border-primary/25 transition-all flex flex-col justify-between"
+                tabIndex={0}
               >
                 <div>
                   {/* Top Row: Icon & Category */}
                   <div className="flex items-center justify-between mb-6">
-                    <div className="w-12 h-12 rounded-xl bg-surface-container-low text-primary flex items-center justify-center shadow-xs border border-surface-container-highest/50 group-hover:bg-primary group-hover:text-white group-hover:scale-110 transition-all duration-300">
-                      <Icon className="w-6 h-6 transition-transform duration-300" aria-hidden="true" />
+                    <div className="w-12 h-12 rounded-xl bg-surface-container-low text-primary flex items-center justify-center shadow-xs border border-surface-container-highest/50 group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                      <Icon className="w-6 h-6 transition-transform duration-300 group-hover:scale-110" aria-hidden="true" />
                     </div>
                     <span className="text-xs font-medium uppercase tracking-wider px-2.5 py-1 rounded-full bg-surface-container text-secondary border border-surface-container-highest/60">
                       {service.category}
@@ -146,14 +153,14 @@ export function Services() {
 
                   <a
                     href="#booking-wizard"
-                    className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:text-primary-container transition-colors group-hover:translate-x-0.5"
+                    className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:text-primary-container transition-colors group-hover:translate-x-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm"
                     aria-label={`Reserve appointment for ${service.title}`}
                   >
                     <span>Reserve consultation</span>
                     <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
                   </a>
                 </div>
-              </div>
+              </motion.div>
             );
           })}
         </div>

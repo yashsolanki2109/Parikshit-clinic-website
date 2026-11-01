@@ -1,5 +1,8 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
+import { motion } from "motion/react";
 import { ArrowRight, Quote, ThumbsUp, Award, ShieldCheck, Sparkles } from "lucide-react";
 
 const ACCREDITATIONS = [
@@ -34,11 +37,11 @@ export function MeetDoctor() {
             {/* Photo Container */}
             <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-xl bg-surface-container relative group border border-surface-container-highest/60">
               <Image
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAf_hn7uUj-zd-bw8nUcF89_aiCrIouO2y-5MDDfOUEyGvqpxw2lJH9YbV5SXWizW4YyyWGScv7Pp9v4XzFv62lPKfxvLtCQEu8zPo0hNK3mx7KtzqMca3f2GqvDmSrCUEUfXA_1UMlD3Qs1Yc-Ox1ko8Xq_C5XLYtrgJhxXqZN53YSc5KDfDKluj-wkE2fLP2kJVOg1epxEDYWotFrtMMgmHpDlXfWTyA4M5kIVAmZ1diXeVcVkzZxsw"
-                alt="Dr. Jinal Parmar, BDS, MDS (Periodontist), FFAC"
+                src="/JinalParamar.jpeg"
+                alt="Dr. Jinal Parmar dental operatory and consultation room at PARIKSHIT CLINIC"
                 fill
                 sizes="(max-width: 1024px) 100vw, 480px"
-                className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
                 priority
               />
 
@@ -67,9 +70,13 @@ export function MeetDoctor() {
             {/* 3 Accreditation Chips Below Portrait in Grid */}
             <div className="grid grid-cols-3 gap-2.5 sm:gap-3 mt-4 sm:mt-5">
               {ACCREDITATIONS.map((chip, index) => (
-                <div
+                <motion.div
                   key={index}
-                  className="bg-white rounded-xl p-3 border border-surface-container-highest/80 shadow-xs text-center flex flex-col items-center justify-center hover:border-primary/30 transition-colors"
+                  whileHover={{ y: -3, scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 25 }}
+                  className="bg-white rounded-xl p-3 border border-surface-container-highest/80 shadow-xs text-center flex flex-col items-center justify-center hover:border-primary/40 hover:shadow-xs transition-colors cursor-default select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                  tabIndex={0}
                 >
                   <span className="font-bold text-sm sm:text-base text-primary tracking-wide">
                     {chip.acronym}
@@ -80,7 +87,7 @@ export function MeetDoctor() {
                   <span className="text-[9px] sm:text-[10px] text-on-surface-variant/75 mt-0.5 line-clamp-1 leading-tight hidden sm:block">
                     {chip.organization}
                   </span>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
@@ -123,13 +130,16 @@ export function MeetDoctor() {
 
             {/* Bottom Action Row */}
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 sm:gap-6 pt-2">
-              <a
+              <motion.a
                 href="#booking-wizard"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-primary text-white font-medium text-sm sm:text-base hover:bg-primary-container transition-all shadow-sm hover:shadow-md active:scale-[0.99]"
+                whileHover={{ scale: 1.03, y: -2 }}
+                whileTap={{ scale: 0.96 }}
+                transition={{ type: "spring", stiffness: 400, damping: 25 }}
+                className="group inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-primary text-white font-medium text-sm sm:text-base hover:bg-primary-container transition-colors shadow-sm hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
               >
                 <span>Reserve With Dr. Parmar</span>
-                <ArrowRight className="w-4 h-4" aria-hidden="true" />
-              </a>
+                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+              </motion.a>
 
               <div className="flex items-center gap-3 px-2 py-1 text-on-surface-variant text-sm">
                 <div className="w-9 h-9 rounded-full bg-emerald-50 border border-emerald-200/60 flex items-center justify-center text-emerald-700 flex-shrink-0 shadow-xs">

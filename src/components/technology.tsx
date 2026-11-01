@@ -1,4 +1,7 @@
+"use client";
+
 import React from "react";
+import { motion } from "motion/react";
 import {
   ScanFace,
   Sparkles,
@@ -91,15 +94,19 @@ export function Technology() {
           {TECHNOLOGIES.map((tech) => {
             const Icon = tech.icon;
             return (
-              <div
+              <motion.div
                 key={tech.id}
-                className="p-6 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all flex flex-col justify-between border border-surface-container-highest/60 group hover:-translate-y-1 duration-300"
+                whileHover={{ y: -4, scale: 1.015 }}
+                whileTap={{ scale: 0.98 }}
+                transition={{ type: "spring", stiffness: 350, damping: 25 }}
+                className="p-6 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-lg transition-all flex flex-col justify-between border border-surface-container-highest/60 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60 cursor-default"
+                tabIndex={0}
               >
                 <div>
                   {/* Top Bar: Icon & Badge */}
                   <div className="flex items-center justify-between mb-5">
-                    <div className="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300 shadow-xs border border-surface-container-highest/40">
-                      <Icon className="w-6 h-6" aria-hidden="true" />
+                    <div className="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-200 shadow-xs border border-surface-container-highest/40">
+                      <Icon className="w-6 h-6 transition-transform duration-200 group-hover:scale-110" aria-hidden="true" />
                     </div>
                     <span className="text-[11px] font-semibold text-secondary bg-surface-container px-2.5 py-1 rounded-full uppercase tracking-wider">
                       {tech.badge}
@@ -126,7 +133,7 @@ export function Technology() {
                     {tech.benefit}
                   </span>
                 </div>
-              </div>
+              </motion.div>
             );
           })}
         </div>
@@ -147,13 +154,16 @@ export function Technology() {
             </div>
           </div>
 
-          <a
+          <motion.a
             href="#booking-wizard"
-            className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-primary text-white text-xs sm:text-sm font-semibold hover:bg-primary-container transition-all shadow-sm shrink-0 whitespace-nowrap"
+            whileHover={{ scale: 1.03, y: -2 }}
+            whileTap={{ scale: 0.96 }}
+            transition={{ type: "spring", stiffness: 400, damping: 25 }}
+            className="group inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-primary text-white text-xs sm:text-sm font-semibold hover:bg-primary-container transition-colors shadow-sm shrink-0 whitespace-nowrap focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
           >
             <span>Request an Appointment</span>
-            <ArrowRight className="w-4 h-4" aria-hidden="true" />
-          </a>
+            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+          </motion.a>
         </div>
       </div>
     </section>

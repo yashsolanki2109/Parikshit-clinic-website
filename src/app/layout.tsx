@@ -30,6 +30,10 @@ export const metadata: Metadata = {
     "HydraFacial Vadodara",
     "PRP Treatment",
   ],
+  icons: {
+    icon: "/parikshit-logo.png",
+    apple: "/parikshit-logo.png",
+  },
 };
 
 export default function RootLayout({

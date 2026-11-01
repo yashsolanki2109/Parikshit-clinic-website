@@ -1,4 +1,7 @@
+"use client";
+
 import React from "react";
+import { motion } from "motion/react";
 import {
   ShieldCheck,
   CheckCircle2,
@@ -129,9 +132,13 @@ export function Pricing() {
           {PRICING_PILLARS.map((pillar) => {
             if (pillar.isFeatured) {
               return (
-                <div
+                <motion.div
                   key={pillar.id}
-                  className="bg-primary text-white shadow-xl relative overflow-hidden rounded-2xl p-7 sm:p-8 border border-primary-container flex flex-col justify-between ring-2 ring-primary/20 hover:shadow-2xl transition-all duration-300"
+                  whileHover={{ y: -4, scale: 1.015 }}
+                  whileTap={{ scale: 0.99 }}
+                  transition={{ type: "spring", stiffness: 350, damping: 25 }}
+                  className="bg-primary text-white shadow-xl relative overflow-hidden rounded-2xl p-7 sm:p-8 border border-primary-container flex flex-col justify-between ring-2 ring-primary/20 hover:shadow-2xl transition-all cursor-default focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-fixed"
+                  tabIndex={0}
                 >
                   {/* Decorative ambient background glows */}
                   <div
@@ -198,26 +205,33 @@ export function Pricing() {
 
                   {/* CTA Button */}
                   <div className="relative z-10 pt-4 border-t border-white/15">
-                    <a
+                    <motion.a
                       href={pillar.ctaHref}
-                      className="inline-flex items-center justify-center gap-2 w-full py-3.5 px-6 rounded-xl bg-white text-primary font-semibold hover:bg-primary-fixed transition-all shadow-md text-sm group"
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.97 }}
+                      transition={{ type: "spring", stiffness: 400, damping: 25 }}
+                      className="inline-flex items-center justify-center gap-2 w-full py-3.5 px-6 rounded-xl bg-white text-primary font-semibold hover:bg-primary-fixed transition-colors shadow-md text-sm group focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
                     >
                       <span>{pillar.ctaText}</span>
                       <ArrowRight
-                        className="w-4 h-4 group-hover:translate-x-0.5 transition-transform"
+                        className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200"
                         aria-hidden="true"
                       />
-                    </a>
+                    </motion.a>
                   </div>
-                </div>
+                </motion.div>
               );
             }
 
             // Standard Pillars (Consultation & Payment Options)
             return (
-              <div
+              <motion.div
                 key={pillar.id}
-                className="bg-surface-container-lowest rounded-2xl p-7 sm:p-8 border border-surface-container-highest/80 shadow-xs hover:shadow-lg hover:border-primary/25 transition-all duration-300 flex flex-col justify-between"
+                whileHover={{ y: -4, scale: 1.015 }}
+                whileTap={{ scale: 0.99 }}
+                transition={{ type: "spring", stiffness: 350, damping: 25 }}
+                className="bg-surface-container-lowest rounded-2xl p-7 sm:p-8 border border-surface-container-highest/80 shadow-xs hover:shadow-lg hover:border-primary/25 transition-all flex flex-col justify-between cursor-default focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
+                tabIndex={0}
               >
                 <div>
                   {/* Top Badge Row */}
@@ -280,27 +294,33 @@ export function Pricing() {
                 {/* Bottom CTA Button */}
                 <div className="pt-4 border-t border-surface-container-highest/60">
                   {pillar.id === "payment-options" ? (
-                    <a
+                    <motion.a
                       href={pillar.ctaHref}
-                      className="inline-flex items-center justify-center gap-2 w-full py-3.5 px-6 rounded-xl border-2 border-primary text-primary font-semibold hover:bg-primary hover:text-white transition-all shadow-xs text-sm group"
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.97 }}
+                      transition={{ type: "spring", stiffness: 400, damping: 25 }}
+                      className="inline-flex items-center justify-center gap-2 w-full py-3.5 px-6 rounded-xl border-2 border-primary text-primary font-semibold hover:bg-primary hover:text-white transition-colors shadow-xs text-sm group focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
                     >
                       <Phone className="w-4 h-4" aria-hidden="true" />
                       <span>{pillar.ctaText}</span>
-                    </a>
+                    </motion.a>
                   ) : (
-                    <a
+                    <motion.a
                       href={pillar.ctaHref}
-                      className="inline-flex items-center justify-center gap-2 w-full py-3.5 px-6 rounded-xl border-2 border-primary text-primary font-semibold hover:bg-primary hover:text-white transition-all shadow-xs text-sm group"
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.97 }}
+                      transition={{ type: "spring", stiffness: 400, damping: 25 }}
+                      className="inline-flex items-center justify-center gap-2 w-full py-3.5 px-6 rounded-xl border-2 border-primary text-primary font-semibold hover:bg-primary hover:text-white transition-colors shadow-xs text-sm group focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
                     >
                       <span>{pillar.ctaText}</span>
                       <ArrowRight
-                        className="w-4 h-4 group-hover:translate-x-0.5 transition-transform"
+                        className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200"
                         aria-hidden="true"
                       />
-                    </a>
+                    </motion.a>
                   )}
                 </div>
-              </div>
+              </motion.div>
             );
           })}
         </div>

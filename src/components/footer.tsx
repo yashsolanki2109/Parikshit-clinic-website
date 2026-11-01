@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { motion } from "motion/react";
 import {
   Phone,
   MapPin,
@@ -31,21 +32,27 @@ export function Footer() {
             </p>
           </div>
           <div className="flex flex-col sm:flex-row items-center gap-3 w-full lg:w-auto shrink-0">
-            <a
+            <motion.a
               href="#booking-wizard"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-primary text-white hover:bg-primary-container font-medium text-sm transition-all duration-200 shadow-sm hover:shadow"
+              whileHover={{ scale: 1.03, y: -2 }}
+              whileTap={{ scale: 0.96 }}
+              transition={{ type: "spring", stiffness: 400, damping: 25 }}
+              className="group w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-primary text-white hover:bg-primary-container font-medium text-sm transition-colors shadow-sm hover:shadow focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
             >
               <Calendar className="w-4 h-4" aria-hidden="true" />
               <span>Request Appointment</span>
-              <ArrowRight className="w-4 h-4" aria-hidden="true" />
-            </a>
-            <a
+              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+            </motion.a>
+            <motion.a
               href="tel:+917016292613"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-surface-container-high hover:bg-surface-container-highest text-primary font-medium text-sm transition-all duration-200 border border-surface-container-highest/80"
+              whileHover={{ scale: 1.03, y: -2 }}
+              whileTap={{ scale: 0.96 }}
+              transition={{ type: "spring", stiffness: 400, damping: 25 }}
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-surface-container-high hover:bg-surface-container-highest text-primary font-medium text-sm transition-colors border border-surface-container-highest/80 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
             >
               <Phone className="w-4 h-4" aria-hidden="true" />
               <span>+91 70162 92613</span>
-            </a>
+            </motion.a>
           </div>
         </div>
 
