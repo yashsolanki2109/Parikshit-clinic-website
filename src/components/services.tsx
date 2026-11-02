@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { motion } from "motion/react";
 import {
   ShieldCheck,
@@ -16,6 +17,7 @@ import {
 
 interface SpecialtyService {
   title: string;
+  slug: string;
   category: string;
   description: string;
   timeline: string;
@@ -26,6 +28,7 @@ interface SpecialtyService {
 const SERVICES: SpecialtyService[] = [
   {
     title: "Preventive Care & Ultrasonic Cleanings",
+    slug: "teeth-cleanings",
     category: "General Dental",
     description:
       "Routine clinical dental exams, digital diagnostics, ultrasonic scaling, thorough debris removal, and home-care gum health review.",
@@ -35,6 +38,7 @@ const SERVICES: SpecialtyService[] = [
   },
   {
     title: "Advanced Periodontal Therapy & Flap Surgery",
+    slug: "flap-surgery",
     category: "Specialist Periodontics",
     description:
       "Periodontal pocket reduction, non-surgical root planing, local antimicrobial drug delivery, and flap surgery directed by Dr. Parmar (MDS).",
@@ -44,6 +48,7 @@ const SERVICES: SpecialtyService[] = [
   },
   {
     title: "Dental Implants & Bone Ridge Augmentation",
+    slug: "dental-implants",
     category: "Implantology",
     description:
       "Precision implant-based tooth replacement, bone contouring, and ridge augmentation procedures to restore jawbone width and height.",
@@ -53,6 +58,7 @@ const SERVICES: SpecialtyService[] = [
   },
   {
     title: "Smile Makeovers & Porcelain Veneers",
+    slug: "porcelain-veneers",
     category: "Cosmetics",
     description:
       "Individualized aesthetic smile design, custom-made porcelain veneers, tooth-coloured composite restorations, and in-office teeth whitening.",
@@ -62,6 +68,7 @@ const SERVICES: SpecialtyService[] = [
   },
   {
     title: "HydraFacial & Plasma Skin Tightening",
+    slug: "hydrafacial-treatment",
     category: "Facial Aesthetics",
     description:
       "Medical deep pore cleansing, vacuum infusion hydration, customized chemical peels, and non-surgical plasma skin tightening.",
@@ -71,6 +78,7 @@ const SERVICES: SpecialtyService[] = [
   },
   {
     title: "Face & Scalp Hair PRP Therapy",
+    slug: "face-prp-treatment",
     category: "Facial Cosmetology",
     description:
       "Autologous platelet-rich plasma treatments for facial collagen regeneration, microneedling, and active scalp hair rejuvenation (FFAC Certified).",
@@ -130,7 +138,9 @@ export function Services() {
 
                   {/* Title */}
                   <h3 className="font-serif text-xl sm:text-2xl font-normal text-primary mb-3 group-hover:text-primary-container transition-colors">
-                    {service.title}
+                    <Link href={`/services/${service.slug}`} className="hover:underline focus:outline-none">
+                      {service.title}
+                    </Link>
                   </h3>
 
                   {/* Description */}
@@ -151,18 +161,39 @@ export function Services() {
                     </span>
                   </div>
 
-                  <a
-                    href="#booking-wizard"
-                    className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:text-primary-container transition-colors group-hover:translate-x-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm"
-                    aria-label={`Reserve appointment for ${service.title}`}
-                  >
-                    <span>Reserve consultation</span>
-                    <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
-                  </a>
+                  <div className="mt-4 flex items-center justify-between gap-2">
+                    <Link
+                      href={`/services/${service.slug}`}
+                      className="inline-flex items-center gap-1 text-xs font-semibold text-secondary hover:text-primary transition-colors"
+                    >
+                      <span>Procedure details</span>
+                      <ArrowRight className="w-3.5 h-3.5" aria-hidden="true" />
+                    </Link>
+
+                    <a
+                      href="#booking-wizard"
+                      className="inline-flex items-center gap-1 text-xs font-semibold text-primary hover:text-primary-container transition-colors"
+                      aria-label={`Reserve appointment for ${service.title}`}
+                    >
+                      <span>Book visit</span>
+                      <ArrowRight className="w-3.5 h-3.5" aria-hidden="true" />
+                    </a>
+                  </div>
                 </div>
               </motion.div>
             );
           })}
+        </div>
+
+        {/* Directory Callout */}
+        <div className="mt-12 text-center">
+          <Link
+            href="/services"
+            className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-surface-container-high border border-surface-container-highest text-primary font-semibold text-xs sm:text-sm hover:bg-primary hover:text-white transition-all shadow-xs"
+          >
+            <span>View All 35 Clinical Treatments &amp; Procedures Directory</span>
+            <ArrowRight className="w-4 h-4" />
+          </Link>
         </div>
       </div>
     </section>

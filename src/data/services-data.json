@@ -1,0 +1,317 @@
+[
+  {
+    "title": "Routine Exams",
+    "slug": "routine-exams",
+    "deptId": "dental",
+    "department": "Dental Treatments",
+    "category": "Preventive & General Care",
+    "description": "Clinical dental evaluations and digital X-rays when indicated.",
+    "clinicalDetail": "Your dentist will review your concerns and relevant dental history, examine your mouth, and explain findings. X-rays are considered only when clinically needed."
+  },
+  {
+    "title": "Teeth Cleanings",
+    "slug": "teeth-cleanings",
+    "deptId": "dental",
+    "department": "Dental Treatments",
+    "category": "Preventive & General Care",
+    "description": "Professional removal of debris, calculus, and surface stains, followed by polishing of the teeth.",
+    "clinicalDetail": "The visit can include a gum-health review and home-care advice. Your clinician will explain what is recommended for your needs."
+  },
+  {
+    "title": "Dental Fillings",
+    "slug": "dental-fillings",
+    "deptId": "dental",
+    "department": "Dental Treatments",
+    "category": "Preventive & General Care",
+    "description": "Tooth-coloured composite restorations.",
+    "clinicalDetail": "After examining the tooth, your dentist can explain suitable filling materials, the steps involved, and expected aftercare."
+  },
+  {
+    "title": "Root Canal Treatment",
+    "slug": "root-canal-treatment",
+    "deptId": "dental",
+    "department": "Dental Treatments",
+    "category": "Endodontic & Pulp Therapy",
+    "description": "Treatment for infection or damage involving the pulp inside a tooth.",
+    "clinicalDetail": "The dentist will assess the tooth, discuss alternatives and explain the treatment stages. Several visits or a final restoration may be needed, depending on the case."
+  },
+  {
+    "title": "Pulpectomy",
+    "slug": "pulpectomy",
+    "deptId": "dental",
+    "department": "Dental Treatments",
+    "category": "Endodontic & Pulp Therapy",
+    "description": "Pulp treatment specially designed for selected deciduous (primary/baby) teeth.",
+    "clinicalDetail": "The dentist will assess whether the tooth can be restored, discuss suitable alternatives, and explain the expected follow-up."
+  },
+  {
+    "title": "Flap Surgery",
+    "slug": "flap-surgery",
+    "deptId": "dental",
+    "department": "Dental Treatments",
+    "category": "Advanced Periodontal Therapy",
+    "description": "Periodontal pocket reduction and access for treatment of affected tissues.",
+    "clinicalDetail": "A periodontal assessment determines whether this approach is appropriate; the clinician discusses alternatives, recovery, and follow-up."
+  },
+  {
+    "title": "Gingivectomy",
+    "slug": "gingivectomy",
+    "deptId": "dental",
+    "department": "Dental Treatments",
+    "category": "Advanced Periodontal Therapy",
+    "description": "Surgical reshaping or removal of excess gum tissue when indicated.",
+    "clinicalDetail": "A consultation reviews gum health and the reason for reshaping; the clinician explains the proposed approach and healing."
+  },
+  {
+    "title": "Frenectomy",
+    "slug": "frenectomy",
+    "deptId": "dental",
+    "department": "Dental Treatments",
+    "category": "Advanced Periodontal Therapy",
+    "description": "Release of restricted muscle attachments when clinically appropriate.",
+    "clinicalDetail": "Assessment considers the attachment and related concerns; the clinician explains whether release or another approach may be appropriate."
+  },
+  {
+    "title": "Local Drug Delivery",
+    "slug": "local-drug-delivery",
+    "deptId": "dental",
+    "department": "Dental Treatments",
+    "category": "Advanced Periodontal Therapy",
+    "description": "Targeted antimicrobial application in selected periodontal pockets.",
+    "clinicalDetail": "This may be discussed as part of a wider periodontal plan; the clinician explains the medicine, application, and follow-up."
+  },
+  {
+    "title": "Non-surgical Periodontal Therapy",
+    "slug": "non-surgical-periodontal-therapy",
+    "deptId": "dental",
+    "department": "Dental Treatments",
+    "category": "Advanced Periodontal Therapy",
+    "description": "Scaling and root planing to manage periodontal disease.",
+    "clinicalDetail": "The plan depends on gum measurements and findings; your clinician reviews home-care steps and maintenance visits."
+  },
+  {
+    "title": "Regenerative Surgery",
+    "slug": "regenerative-surgery",
+    "deptId": "dental",
+    "department": "Dental Treatments",
+    "category": "Regenerative & Reconstructive Surgery",
+    "description": "Selected regenerative techniques and bone grafting to support tissue repair.",
+    "clinicalDetail": "A specialist evaluates the site and explains whether regenerative methods may be considered, along with alternatives and recovery."
+  },
+  {
+    "title": "Ostectomy",
+    "slug": "ostectomy",
+    "deptId": "dental",
+    "department": "Dental Treatments",
+    "category": "Regenerative & Reconstructive Surgery",
+    "description": "Surgical bone contouring to reshape supporting structures when indicated.",
+    "clinicalDetail": "Your clinician discusses the reason for bone contouring, nearby structures, the planned steps, and follow-up."
+  },
+  {
+    "title": "Ridge Augmentation",
+    "slug": "ridge-augmentation",
+    "deptId": "dental",
+    "department": "Dental Treatments",
+    "category": "Regenerative & Reconstructive Surgery",
+    "description": "Procedures to restore jawbone width or height in suitable cases.",
+    "clinicalDetail": "Assessment considers jawbone shape and future restoration goals; options, healing time, and alternatives are reviewed."
+  },
+  {
+    "title": "Periodontal Plastic Surgery",
+    "slug": "periodontal-plastic-surgery",
+    "deptId": "dental",
+    "department": "Dental Treatments",
+    "category": "Plastic & Cosmetic Dentistry",
+    "description": "Gum procedures to address selected functional or aesthetic concerns.",
+    "clinicalDetail": "Consultation explores gum health, functional or aesthetic goals, available approaches, and expected healing."
+  },
+  {
+    "title": "Smile Makeovers",
+    "slug": "smile-makeovers",
+    "deptId": "dental",
+    "department": "Dental Treatments",
+    "category": "Plastic & Cosmetic Dentistry",
+    "description": "Individualised smile assessment and aesthetic treatment planning.",
+    "clinicalDetail": "Planning starts with your goals and an oral-health assessment; the dentist explains possible sequences, options, and limitations."
+  },
+  {
+    "title": "Porcelain Veneers",
+    "slug": "porcelain-veneers",
+    "deptId": "dental",
+    "department": "Dental Treatments",
+    "category": "Plastic & Cosmetic Dentistry",
+    "description": "Custom-made shells to improve the appearance of suitable teeth.",
+    "clinicalDetail": "Your dentist reviews tooth condition and bite, discusses alternatives and preparation, and explains care and maintenance."
+  },
+  {
+    "title": "Teeth Whitening",
+    "slug": "teeth-whitening",
+    "deptId": "dental",
+    "department": "Dental Treatments",
+    "category": "Plastic & Cosmetic Dentistry",
+    "description": "Professional whitening options following a suitability assessment.",
+    "clinicalDetail": "Assessment checks tooth and gum health and existing restorations; your dentist discusses suitable options and possible sensitivity."
+  },
+  {
+    "title": "Dental Implants",
+    "slug": "dental-implants",
+    "deptId": "dental",
+    "department": "Dental Treatments",
+    "category": "Implantology & Restorative Care",
+    "description": "Implant-based tooth replacement following clinical assessment.",
+    "clinicalDetail": "Consultation reviews oral health and bone, any imaging needed, alternatives, stages, timing, risks, and maintenance."
+  },
+  {
+    "title": "Crowns & Bridges",
+    "slug": "crowns-bridges",
+    "deptId": "dental",
+    "department": "Dental Treatments",
+    "category": "Implantology & Restorative Care",
+    "description": "Restorations using suitable ceramic, zirconia or other materials.",
+    "clinicalDetail": "The dentist evaluates the teeth and bite, then discusses restoration materials, preparation, expected visits, and care."
+  },
+  {
+    "title": "Mouth Reconstruction",
+    "slug": "mouth-reconstruction",
+    "deptId": "dental",
+    "department": "Dental Treatments",
+    "category": "Implantology & Restorative Care",
+    "description": "Comprehensive restorative planning, including implant-supported rehabilitation when appropriate.",
+    "clinicalDetail": "A staged plan may combine services based on examination findings; the dentist explains sequence, alternatives, timelines, and maintenance."
+  },
+  {
+    "title": "Pediatric Dentistry",
+    "slug": "pediatric-dentistry",
+    "deptId": "dental",
+    "department": "Dental Treatments",
+    "category": "Specialized Dental Care",
+    "description": "Dental assessment and care tailored to children's needs.",
+    "clinicalDetail": "The visit is tailored to a child's age and needs; the team can explain the planned assessment, preventive advice, and next steps."
+  },
+  {
+    "title": "Emergency Dentistry",
+    "slug": "emergency-dentistry",
+    "deptId": "dental",
+    "department": "Dental Treatments",
+    "category": "Specialized Dental Care",
+    "description": "Assessment of urgent dental pain, injury and other dental concerns.",
+    "clinicalDetail": "Call the clinic to discuss urgent symptoms and current availability; an examination helps determine next steps and whether referral is needed."
+  },
+  {
+    "title": "Orthodontic Treatment",
+    "slug": "orthodontic-treatment",
+    "deptId": "dental",
+    "department": "Dental Treatments",
+    "category": "Specialized Dental Care",
+    "description": "Assessment and planning for tooth alignment and bite concerns.",
+    "clinicalDetail": "Options may include braces or other clinician-guided appliances. The approach, timing, and follow-up depend on an orthodontic assessment."
+  },
+  {
+    "title": "Mole Removal",
+    "slug": "mole-removal",
+    "deptId": "aesthetics",
+    "department": "Facial Aesthetics & Cosmetology",
+    "category": "General Care",
+    "description": "Assessment of the lesion and appropriate options where indicated.",
+    "clinicalDetail": "Consultation reviews the area and whether assessment by another specialist is needed; suitable options and healing are discussed."
+  },
+  {
+    "title": "Freckle Removal",
+    "slug": "freckle-removal",
+    "deptId": "aesthetics",
+    "department": "Facial Aesthetics & Cosmetology",
+    "category": "General Care",
+    "description": "Assessment of pigmentation and suitable cosmetic treatment options.",
+    "clinicalDetail": "Consultation considers pigmentation, skin type, and medical history; available options, aftercare, and variable results are discussed."
+  },
+  {
+    "title": "Eyelid Xanthelasma Removal",
+    "slug": "eyelid-xanthelasma-removal",
+    "deptId": "aesthetics",
+    "department": "Facial Aesthetics & Cosmetology",
+    "category": "General Care",
+    "description": "Assessment of cholesterol deposits around the eyelids and appropriate treatment or referral.",
+    "clinicalDetail": "The clinician assesses the eyelid area and suitability, and may recommend medical assessment or referral before cosmetic treatment."
+  },
+  {
+    "title": "Ozone High-Frequency Facial",
+    "slug": "ozone-high-frequency-facial",
+    "deptId": "aesthetics",
+    "department": "Facial Aesthetics & Cosmetology",
+    "category": "General Care",
+    "description": "Facial treatment incorporating high-frequency equipment and an LED mask, according to the protocol offered.",
+    "clinicalDetail": "The clinic can explain its exact protocol, equipment, suitability screening, risks, and aftercare during consultation."
+  },
+  {
+    "title": "Plasma Skin Tightening",
+    "slug": "plasma-skin-tightening",
+    "deptId": "aesthetics",
+    "department": "Facial Aesthetics & Cosmetology",
+    "category": "General Care",
+    "description": "Skin-tightening treatment assessment and discussion of suitable options.",
+    "clinicalDetail": "Consultation covers the device and technique used, skin suitability, risks, aftercare, and other available options."
+  },
+  {
+    "title": "Chemical Peel",
+    "slug": "chemical-peel",
+    "deptId": "aesthetics",
+    "department": "Facial Aesthetics & Cosmetology",
+    "category": "General Care",
+    "description": "Skin exfoliation treatment selected according to skin type and concerns.",
+    "clinicalDetail": "Selection considers skin type, concern, and history; the clinician explains preparation, aftercare, recovery, and possible reactions."
+  },
+  {
+    "title": "HydraFacial Treatment",
+    "slug": "hydrafacial-treatment",
+    "deptId": "aesthetics",
+    "department": "Facial Aesthetics & Cosmetology",
+    "category": "General Care",
+    "description": "Facial cleansing, exfoliation and hydration according to the protocol offered.",
+    "clinicalDetail": "The clinic can explain the products and steps included, suitability, possible reactions, and aftercare for your skin."
+  },
+  {
+    "title": "Vampire Facial (Microneedling)",
+    "slug": "vampire-facial-microneedling",
+    "deptId": "aesthetics",
+    "department": "Facial Aesthetics & Cosmetology",
+    "category": "General Care",
+    "description": "Microneedling-based facial treatment; confirm the exact protocol offered at the clinic.",
+    "clinicalDetail": "Consultation explains whether microneedling or PRP is included, the exact protocol, suitability, risks, recovery, and aftercare."
+  },
+  {
+    "title": "Face PRP Treatment",
+    "slug": "face-prp-treatment",
+    "deptId": "aesthetics",
+    "department": "Facial Aesthetics & Cosmetology",
+    "category": "General Care",
+    "description": "Facial platelet-rich plasma treatment following a suitability assessment.",
+    "clinicalDetail": "The practitioner explains the preparation and application process, suitability, alternatives, risks, and aftercare."
+  },
+  {
+    "title": "Hair PRP Treatment",
+    "slug": "hair-prp-treatment",
+    "deptId": "aesthetics",
+    "department": "Facial Aesthetics & Cosmetology",
+    "category": "General Care",
+    "description": "Scalp PRP treatment assessment for selected hair-related concerns.",
+    "clinicalDetail": "Consultation reviews scalp concerns and alternatives, and explains the protocol, follow-up, expected course, and limits."
+  },
+  {
+    "title": "Permanent Hair Reduction",
+    "slug": "permanent-hair-reduction",
+    "deptId": "aesthetics",
+    "department": "Facial Aesthetics & Cosmetology",
+    "category": "General Care",
+    "description": "Hair reduction treatment using the technology available at the clinic. Results vary by individual.",
+    "clinicalDetail": "The clinician discusses the device used, skin and hair characteristics, preparation, likely treatment schedule, and variable results."
+  },
+  {
+    "title": "Permanent Eyebrow Microblading",
+    "slug": "permanent-eyebrow-microblading",
+    "deptId": "aesthetics",
+    "department": "Facial Aesthetics & Cosmetology",
+    "category": "General Care",
+    "description": "Cosmetic eyebrow enhancement using a microblading technique.",
+    "clinicalDetail": "Consultation covers brow design, pigment, hygiene, healing, aftercare, touch-up planning, and suitability."
+  }
+]

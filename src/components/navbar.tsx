@@ -57,7 +57,7 @@ export function Navbar() {
           {/* Zone 1: Brand (Left) */}
           <div className="flex-shrink-0">
             <a
-              href="#"
+              href="/"
               className="flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-lg p-1 -m-1"
               aria-label="PARIKSHIT CLINIC home"
             >
@@ -107,7 +107,7 @@ export function Navbar() {
 
             {/* Book Appointment CTA */}
             <motion.a
-              href="#booking-wizard"
+              href="/#booking-wizard"
               whileHover={{ scale: 1.03, y: -1 }}
               whileTap={{ scale: 0.96 }}
               transition={{ type: "spring", stiffness: 400, damping: 25 }}
@@ -198,7 +198,7 @@ export function Navbar() {
                 </a>
 
                 <a
-                  href="#booking-wizard"
+                  href="/#booking-wizard"
                   onClick={handleLinkClick}
                   className="w-full py-3 px-4 rounded-full bg-primary text-white text-sm font-semibold hover:bg-primary-container hover:text-primary-fixed transition-all shadow-sm flex items-center justify-center gap-2 text-center"
                 >
