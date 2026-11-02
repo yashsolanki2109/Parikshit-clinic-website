@@ -202,8 +202,15 @@ export function Footer() {
           </div>
         </div>
 
+        {/* Statutory Medical Disclaimer */}
+        <div className="pt-8 pb-4 border-t border-surface-container-highest/60 text-[11px] text-on-surface-variant/80 text-center leading-relaxed max-w-4xl mx-auto">
+          <p>
+            <strong>Medical Disclaimer:</strong> The clinical information on this website is for educational and general patient awareness only and does not constitute formal medical diagnosis or advice. Treatment suitability, procedures, and risks are determined solely following an in-person clinical examination by Dr. Jinal Parmar at PARIKSHIT CLINIC.
+          </p>
+        </div>
+
         {/* Bottom Bar: Copyright & Legal */}
-        <div className="pt-8 border-t border-surface-container-highest/70 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-on-surface-variant">
+        <div className="pt-6 border-t border-surface-container-highest/70 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-on-surface-variant">
           <div className="flex flex-wrap items-center justify-center md:justify-start gap-2 sm:gap-3 text-center md:text-left">
             <span>© {new Date().getFullYear()} PARIKSHIT CLINIC. All rights reserved.</span>
             <span className="hidden sm:inline" aria-hidden="true">•</span>

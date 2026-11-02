@@ -38,7 +38,7 @@ export function MeetDoctor() {
             <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-xl bg-surface-container relative group border border-surface-container-highest/60">
               <Image
                 src="/JinalParamar.jpeg"
-                alt="Dr. Jinal Parmar dental operatory and consultation room at PARIKSHIT CLINIC"
+                alt="Dr. Jinal Parmar BDS MDS Periodontist and Facial Aesthetics specialist at PARIKSHIT CLINIC Vadodara"
                 fill
                 sizes="(max-width: 1024px) 100vw, 480px"
                 className="object-cover transition-transform duration-700 group-hover:scale-105"

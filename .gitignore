@@ -39,6 +39,9 @@ package-lock.json
 docs/
 
 
+# scratch
+scratch/
+
 # OpenNext & Cloudflare Wrangler
 .open-next/
 .wrangler/

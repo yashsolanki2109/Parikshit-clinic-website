@@ -102,9 +102,9 @@ export function Hero() {
               variants={itemVariants}
               className="font-serif text-4xl sm:text-5xl lg:text-[54px] text-primary tracking-tight leading-[1.15] mb-6"
             >
-              Healthy Smiles.{" "}
+              Dental &amp; Facial Aesthetics in Vadodara.{" "}
               <span className="italic font-normal text-secondary block sm:inline">
-                Confident You.
+                Healthy Smiles. Confident You.
               </span>
             </motion.h1>
 
