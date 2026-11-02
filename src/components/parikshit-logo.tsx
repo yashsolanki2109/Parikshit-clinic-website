@@ -19,7 +19,7 @@ export function ParikshitLogo({
         style={{ width: size, height: size }}
       >
         <Image
-          src="/parikshit-logo.png"
+          src="/parikshit-logo.webp"
           alt="PARIKSHIT CLINIC 3D dental implant logo"
           width={size}
           height={size}
