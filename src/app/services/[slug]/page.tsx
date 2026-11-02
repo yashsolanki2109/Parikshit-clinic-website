@@ -109,7 +109,7 @@ export default async function ServiceDetailPage({
       telephone: "+91-70162-92613",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "14, Ground Floor, Siddharth Elegance Complex, Near SBI Bank, Old Chhani Road",
+        streetAddress: "14, Siddharth Elegance, Navayard Rd, near SBI Bank, Navi Ashapuri, Ram Wadi",
         addressLocality: "Vadodara",
         addressRegion: "Gujarat",
         postalCode: "390024",

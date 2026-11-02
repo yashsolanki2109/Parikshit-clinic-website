@@ -103,7 +103,7 @@ export function StepConfirm({
       "BEGIN:VEVENT",
       `SUMMARY:PARIKSHIT CLINIC: ${service.title} with Dr. Jinal Parmar`,
       `DESCRIPTION:Appointment request at PARIKSHIT CLINIC. Department: ${service.department}. Confirmation Code: ${confirmationCode}`,
-      "LOCATION:14, Ground Floor, Siddharth Elegance Complex, Old Chhani Road, Vadodara - 390024",
+      "LOCATION:14, Siddharth Elegance, Navayard Rd, near SBI Bank, Navi Ashapuri, Ram Wadi, Vadodara - 390024",
       "STATUS:CONFIRMED",
       "END:VEVENT",
       "END:VCALENDAR",
@@ -210,7 +210,7 @@ export function StepConfirm({
           <div className="p-4 flex items-start gap-2 text-xs text-on-surface-variant bg-surface-container-low/50">
             <MapPin className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" aria-hidden="true" />
             <span>
-              <strong>PARIKSHIT CLINIC:</strong> 14, Ground Floor, Siddharth Elegance Complex, Near SBI Bank, Old Chhani Road, Vadodara – 390024, Gujarat (Phone: +91 70162 92613 / +91 98796 10179)
+              <strong>PARIKSHIT CLINIC:</strong> 14, Siddharth Elegance, Navayard Rd, near SBI Bank, Navi Ashapuri, Ram Wadi, Vadodara – 390024, Gujarat (Phone: +91 70162 92613 / +91 98796 10179)
             </span>
           </div>
         </div>

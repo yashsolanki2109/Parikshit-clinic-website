@@ -207,7 +207,7 @@ export function Navbar() {
                 </a>
 
                 <p className="text-[11px] text-center text-on-surface-variant/80 mt-1">
-                  14, Siddharth Elegance Complex, Old Chhani Rd, Vadodara, Gujarat
+                  14, Siddharth Elegance, Navayard Rd, near SBI Bank, Vadodara, Gujarat 390024
                 </p>
               </div>
             </motion.div>

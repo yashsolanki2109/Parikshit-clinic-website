@@ -180,7 +180,7 @@ export function FAQSection() {
                         Clinic Address
                       </h4>
                       <p className="text-sm font-medium text-on-surface mt-0.5">
-                        14, Ground Floor, Siddharth Elegance Complex, Near SBI Bank, Old Chhani Road
+                        14, Siddharth Elegance, Navayard Rd, near SBI Bank, Navi Ashapuri, Ram Wadi
                       </p>
                       <p className="text-xs text-on-surface-variant mt-0.5">
                         Vadodara – 390024, Gujarat, India
@@ -272,14 +272,14 @@ export function FAQSection() {
                       <div>
                         <div className="flex items-center gap-2">
                           <span className="font-serif font-semibold text-primary text-sm sm:text-base">
-                            Siddharth Elegance Complex
+                            Siddharth Elegance
                           </span>
                           <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-primary-fixed text-primary">
                             Shop 14
                           </span>
                         </div>
                         <p className="text-xs text-on-surface-variant mt-0.5">
-                          Near SBI Bank, Old Chhani Road
+                          Navayard Rd, near SBI Bank, Navi Ashapuri, Ram Wadi
                         </p>
                         <p className="text-[11px] text-secondary mt-1 font-medium">
                           Vadodara – 390024, Gujarat
@@ -288,7 +288,7 @@ export function FAQSection() {
                     </div>
 
                     <a
-                      href="https://maps.google.com/?q=Siddharth+Elegance+Complex+Old+Chhani+Road+Vadodara+390024"
+                      href="https://www.google.com/maps/search/?api=1&query=14%2C+Siddharth+Elegance%2C+Navayard+Rd%2C+near+SBI+Bank%2C+Navi+Ashapuri%2C+Ram+Wadi%2C+Vadodara%2C+Gujarat+390024"
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="Open Parikshit Clinic location in Google Maps"

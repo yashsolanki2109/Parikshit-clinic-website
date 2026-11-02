@@ -15,9 +15,11 @@ export function ClinicSchema() {
     "currenciesAccepted": "INR",
     "paymentAccepted": "Cash, Credit Card, Debit Card, UPI",
     "areaServed": "Vadodara, Gujarat",
+    "hasMap": "https://www.google.com/maps/search/?api=1&query=14%2C+Siddharth+Elegance%2C+Navayard+Rd%2C+near+SBI+Bank%2C+Navi+Ashapuri%2C+Ram+Wadi%2C+Vadodara%2C+Gujarat+390024",
+    "maps": "https://www.google.com/maps/search/?api=1&query=14%2C+Siddharth+Elegance%2C+Navayard+Rd%2C+near+SBI+Bank%2C+Navi+Ashapuri%2C+Ram+Wadi%2C+Vadodara%2C+Gujarat+390024",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "14, Ground Floor, Siddharth Elegance Complex, Near SBI Bank, Old Chhani Road",
+      "streetAddress": "14, Siddharth Elegance, Navayard Rd, near SBI Bank, Navi Ashapuri, Ram Wadi",
       "addressLocality": "Vadodara",
       "addressRegion": "Gujarat",
       "postalCode": "390024",

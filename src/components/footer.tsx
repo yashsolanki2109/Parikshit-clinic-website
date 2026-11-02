@@ -69,7 +69,14 @@ export function Footer() {
             <div className="space-y-2 pt-1 text-xs">
               <div className="flex items-start gap-2 text-on-surface-variant">
                 <MapPin className="w-4 h-4 text-secondary shrink-0 mt-0.5" aria-hidden="true" />
-                <span>14, Siddharth Elegance Complex, Near SBI Bank, Old Chhani Rd, Vadodara – 390024</span>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=14%2C+Siddharth+Elegance%2C+Navayard+Rd%2C+near+SBI+Bank%2C+Navi+Ashapuri%2C+Ram+Wadi%2C+Vadodara%2C+Gujarat+390024"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary hover:underline transition-colors"
+                >
+                  14, Siddharth Elegance, Navayard Rd, near SBI Bank, Navi Ashapuri, Ram Wadi, Vadodara – 390024
+                </a>
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-secondary shrink-0" aria-hidden="true" />

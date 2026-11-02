@@ -333,7 +333,7 @@ export function BookingWizard() {
           <span className="hidden sm:inline text-outline-variant">•</span>
           <div className="flex items-center gap-2">
             <span className="text-secondary font-bold">📍</span>
-            <span>Siddharth Elegance Complex, Old Chhani Rd, Vadodara</span>
+            <span>14, Siddharth Elegance, Navayard Rd, Vadodara</span>
           </div>
         </div>
       </div>
