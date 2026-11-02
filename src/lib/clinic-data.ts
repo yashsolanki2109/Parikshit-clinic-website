@@ -4,6 +4,8 @@ export const CLINIC_DATA = {
   doctor: {
     name: "Dr. Jinal Parmar",
     qualifications: "BDS · MDS (Periodontist) · FFAC",
+    registrationNumber: "A-20290",
+    council: "Gujarat Dental Council",
     degrees: [
       { code: "BDS", name: "Bachelor of Dental Surgery", desc: "General & Restorative Dental Care" },
       { code: "MDS", name: "Master of Dental Surgery (Periodontology)", desc: "Specialist in Gum Disease, Flap Surgery & Bone Regeneration" },

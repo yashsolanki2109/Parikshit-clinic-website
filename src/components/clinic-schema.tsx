@@ -81,8 +81,22 @@ export function ClinicSchema() {
           "@type": "EducationalOccupationalCredential",
           "credentialCategory": "fellowship",
           "name": "Fellowship in Facial Aesthetics and Cosmetology (FFAC)"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "license",
+          "name": "Registered Dental Surgeon & Periodontist (Reg. No. A-20290)",
+          "recognizedBy": {
+            "@type": "MedicalOrganization",
+            "name": "Gujarat Dental Council"
+          }
         }
       ],
+      "identifier": {
+        "@type": "PropertyValue",
+        "name": "Gujarat Dental Council Registration",
+        "value": "A-20290"
+      },
       "medicalSpecialty": ["Periodontics", "Dentistry"]
     }
   };

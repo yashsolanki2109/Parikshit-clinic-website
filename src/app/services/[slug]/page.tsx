@@ -333,6 +333,10 @@ export default async function ServiceDetailPage({
                       <span className="w-1.5 h-1.5 rounded-full bg-secondary" />
                       <span>FFAC · Fellowship in Facial Aesthetics &amp; Cosmetology</span>
                     </div>
+                    <div className="flex items-center gap-2 text-primary font-medium pt-1 border-t border-surface-container-highest/40">
+                      <ShieldCheck className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                      <span>GDC Reg. No. A-20290 (Gujarat Dental Council)</span>
+                    </div>
                   </div>
                 </div>
 

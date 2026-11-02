@@ -58,7 +58,7 @@ export function MeetDoctor() {
                     Dr. Jinal Parmar
                   </h3>
                   <p className="text-xs text-on-surface-variant font-medium mt-0.5">
-                    BDS · MDS (Periodontist) · FFAC
+                    BDS · MDS (Periodontist) · FFAC · Reg: A-20290
                   </p>
                 </div>
                 <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-primary text-white shadow-xs flex-shrink-0">
@@ -89,6 +89,17 @@ export function MeetDoctor() {
                   </span>
                 </motion.div>
               ))}
+            </div>
+
+            {/* Verified Medical Council Registration Badge */}
+            <div className="mt-3 px-3.5 py-2.5 rounded-xl bg-white border border-surface-container-highest/80 shadow-xs flex items-center justify-between gap-2 text-xs">
+              <div className="flex items-center gap-2 text-primary font-medium">
+                <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" aria-hidden="true" />
+                <span>Gujarat Dental Council Registered</span>
+              </div>
+              <span className="font-mono text-[11px] font-semibold px-2 py-0.5 rounded bg-surface-container text-secondary border border-surface-container-highest">
+                Reg: A-20290
+              </span>
             </div>
           </div>
 
@@ -123,7 +134,7 @@ export function MeetDoctor() {
               </blockquote>
               <div className="mt-3 flex items-center gap-2">
                 <span className="text-xs font-semibold text-primary uppercase tracking-wider">
-                  — Dr. Jinal Parmar, BDS · MDS · FFAC
+                  — Dr. Jinal Parmar, BDS · MDS · FFAC (GDC Reg: A-20290)
                 </span>
               </div>
             </div>
