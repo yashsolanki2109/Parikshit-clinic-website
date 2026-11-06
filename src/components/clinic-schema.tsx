@@ -1,7 +1,7 @@
 export function ClinicSchema() {
   const schema = {
     "@context": "https://schema.org",
-    "@type": ["Dentist", "LocalBusiness", "MedicalBusiness"],
+    "@type": "Dentist",
     "@id": "https://parikshit.space/#clinic",
     "name": "PARIKSHIT CLINIC",
     "alternateName": "Parikshit Dental, Periodontics & Facial Aesthetics Clinic",

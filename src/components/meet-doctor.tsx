@@ -113,8 +113,12 @@ export function MeetDoctor() {
 
             {/* Headline */}
             <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-normal text-primary tracking-tight leading-tight">
-              &ldquo;Thoughtful assessment, gentle care, and treatment designed around your comfort.&rdquo;
+              Meet Dr. Jinal Parmar — Specialist Periodontist &amp; Facial Aesthetics Clinician
             </h2>
+
+            <p className="font-serif italic text-lg sm:text-xl text-secondary">
+              &ldquo;Thoughtful assessment, gentle care, and treatment designed around your comfort.&rdquo;
+            </p>
 
             {/* 2 Paragraphs */}
             <div className="space-y-4 text-on-surface-variant text-base sm:text-lg leading-relaxed">

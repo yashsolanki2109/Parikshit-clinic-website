@@ -951,11 +951,11 @@ export const ALL_SERVICES: ServiceDetail[] = [
     "title": "Dental Implants",
     "h1": "Dental Implants in Vadodara",
     "metaTitle": "Dental Implants in Vadodara | PARIKSHIT CLINIC",
-    "metaDescription": "Implant-based tooth replacement following clinical assessment.... Expert care by Dr. Jinal Parmar at PARIKSHIT CLINIC, Vadodara. Request a consultation.",
+    "metaDescription": "Implant-based tooth restoration following clinical assessment. Expert care by Dr. Jinal Parmar at PARIKSHIT CLINIC, Vadodara. Request a consultation.",
     "deptId": "dental",
     "department": "Dental Treatments",
     "category": "Implantology & Restorative Care",
-    "shortDescription": "Implant-based tooth replacement following clinical assessment.",
+    "shortDescription": "Implant-based tooth restoration following clinical assessment.",
     "clinicalDetail": "Consultation reviews oral health and bone, any imaging needed, alternatives, stages, timing, risks, and maintenance.",
     "specialist": {
       "name": "Dr. Jinal Parmar",

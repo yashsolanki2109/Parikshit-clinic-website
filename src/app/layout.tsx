@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "PARIKSHIT CLINIC | Dental & Facial Aesthetics | Dr. Jinal Parmar",
+    title: "PARIKSHIT CLINIC | Dental & Aesthetics Vadodara",
     description:
       "Specialist dental care, periodontal therapy, and facial aesthetics in Vadodara by Dr. Jinal Parmar (BDS, MDS, FFAC).",
     url: "https://parikshit.space",
