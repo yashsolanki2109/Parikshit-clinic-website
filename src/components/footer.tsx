@@ -174,31 +174,30 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Column 4: Clinical Departments */}
+          {/* Column 4: Key Clinical Treatments */}
           <div className="space-y-4">
             <h3 className="font-serif text-base font-semibold text-primary flex items-center gap-2">
               <CreditCard className="w-4 h-4 text-secondary" aria-hidden="true" />
-              <span>Two Departments</span>
+              <span>Core Treatments</span>
             </h3>
 
-            <p className="text-xs text-on-surface-variant leading-relaxed">
-              Offering comprehensive care across Dental &amp; Periodontal Treatments and Facial Aesthetics &amp; Cosmetology.
-            </p>
+            <div className="grid grid-cols-2 gap-x-2 gap-y-1.5 text-xs">
+              <a href="/services/dental-implants" className="text-on-surface-variant hover:text-primary transition-colors py-0.5">Dental Implants</a>
+              <a href="/services/flap-surgery" className="text-on-surface-variant hover:text-primary transition-colors py-0.5">Gum Flap Surgery</a>
+              <a href="/services/teeth-cleanings" className="text-on-surface-variant hover:text-primary transition-colors py-0.5">Teeth Cleanings</a>
+              <a href="/services/root-canal-treatment" className="text-on-surface-variant hover:text-primary transition-colors py-0.5">Root Canal Care</a>
+              <a href="/services/hydrafacial-treatment" className="text-on-surface-variant hover:text-primary transition-colors py-0.5">HydraFacial</a>
+              <a href="/services/face-prp-treatment" className="text-on-surface-variant hover:text-primary transition-colors py-0.5">Face PRP Therapy</a>
+              <a href="/services/chemical-peel" className="text-on-surface-variant hover:text-primary transition-colors py-0.5">Chemical Peel</a>
+              <a href="/services/emergency-dentistry" className="text-on-surface-variant hover:text-primary transition-colors py-0.5">Emergency Dental</a>
+            </div>
 
-            <div className="space-y-2 pt-1">
+            <div className="pt-2">
               <a
-                href="#services-directory"
+                href="/services"
                 className="group flex items-center justify-between p-2.5 rounded-xl bg-surface-container-lowest border border-surface-container-highest/60 hover:border-secondary/40 text-xs font-medium text-primary hover:text-primary transition-all duration-200"
               >
-                <span>Department 1: Dental Treatments</span>
-                <ArrowRight className="w-3.5 h-3.5 text-secondary group-hover:translate-x-0.5 transition-transform" aria-hidden="true" />
-              </a>
-
-              <a
-                href="#services-directory"
-                className="group flex items-center justify-between p-2.5 rounded-xl bg-surface-container-lowest border border-surface-container-highest/60 hover:border-secondary/40 text-xs font-medium text-primary hover:text-primary transition-all duration-200"
-              >
-                <span>Department 2: Facial Aesthetics</span>
+                <span>Browse All 35 Procedures</span>
                 <ArrowRight className="w-3.5 h-3.5 text-secondary group-hover:translate-x-0.5 transition-transform" aria-hidden="true" />
               </a>
             </div>
@@ -229,19 +228,19 @@ export function Footer() {
 
           <div className="flex flex-wrap items-center justify-center gap-4 text-xs">
             <a
-              href="#about-doctor"
+              href="/#about-doctor"
               className="hover:text-primary transition-colors focus:outline-none focus-visible:underline"
             >
               About Dr. Parmar
             </a>
             <a
-              href="#services-directory"
+              href="/services"
               className="hover:text-primary transition-colors focus:outline-none focus-visible:underline"
             >
               Services
             </a>
             <a
-              href="#faq"
+              href="/#faq"
               className="hover:text-primary transition-colors focus:outline-none focus-visible:underline"
             >
               FAQ
