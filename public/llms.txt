@@ -1,23 +1,65 @@
-# PARIKSHIT CLINIC
-> Dental, Periodontics & Facial Aesthetics Clinic in Vadodara, Gujarat.
+# PARIKSHIT CLINIC — Dental, Periodontics & Facial Aesthetics
+> Specialist dental practice and facial aesthetics clinic in Vadodara, Gujarat, India, directed by Dr. Jinal Parmar (BDS, MDS Periodontology, FFAC).
 
-## Clinical Leadership
+## Clinical Leadership & Credentials
 - Lead Clinician: Dr. Jinal Parmar
-- Qualifications: BDS, MDS (Periodontology & Oral Implantology), FFAC (Fellowship in Facial Aesthetics & Cosmetology)
-- State Medical Registration: Gujarat Dental Council (GDC) Registration No. A-20290
-- Practice Philosophy: Gentle, personalized, biologically restorative dental and aesthetic care.
+- Medical Qualifications: BDS (Bachelor of Dental Surgery), MDS (Master of Dental Surgery in Periodontology & Oral Implantology), FFAC (Fellowship in Facial Aesthetics & Cosmetology)
+- Medical Council Registration: Gujarat Dental Council (GDC) Registration No. A-20290
+- Practice Specialization: Periodontal flap surgery, regenerative bone grafting, precision dental implants, smile makeovers, and medical-grade facial cosmetology (HydraFacial, PRP therapy).
+- Clinical Approach: Evidence-based, conservative, gentle, biologically restorative care with dedicated 30-minute consultation windows.
 
-## Core Clinical Services
-1. Periodontal Therapy & Flap Surgery: Deep scaling, root planing, regenerative bone grafting, and surgical flap procedures.
-2. Dental Implants & Prosthetics: Precision tooth replacement and ridge contouring.
-3. Aesthetic Dentistry: Custom porcelain veneers, composite bonding, and in-office teeth whitening.
-4. Facial Cosmetology: HydraFacial medical skin resurfacing, autologous PRP (Platelet-Rich Plasma) for face rejuvenation and scalp hair thinning.
-5. Preventive & Pediatric Dentistry: Routine dental exams, digital radiography, ultrasonic cleanings, and pulpectomy.
+## Clinic Location & Patient Contact
+- Official Website: https://parikshit.space
+- Full Service Catalog: https://parikshit.space/services
+- Physical Address: 14, Siddharth Elegance, Navayard Rd, near SBI Bank, Navi Ashapuri, Ram Wadi, Vadodara – 390024, Gujarat, India
+- Geolocation Coordinates: Latitude 22.3375, Longitude 73.1812
+- Google Maps: https://www.google.com/maps/search/?api=1&query=14%2C+Siddharth+Elegance%2C+Navayard+Rd%2C+near+SBI+Bank%2C+Navi+Ashapuri%2C+Ram+Wadi%2C+Vadodara%2C+Gujarat+390024
+- Primary Telephone / WhatsApp: +91 70162 92613
+- Alternate Emergency Telephone: +91 98796 10179
+- Patient Email: parikshitclinic20@gmail.com
+- Regular Consultation Hours: Monday to Saturday — Morning: 10:00 AM – 1:00 PM; Evening: 5:00 PM – 8:00 PM. Sunday: by prior appointment.
+- Appointment Structure: Dedicated 30-minute slots to ensure unhurried diagnosis, patient comfort, and transparent fee estimation.
 
-## Clinic Location & Contact
-- Website: https://parikshit.space
-- Address: 14, Siddharth Elegance, Navayard Rd, near SBI Bank, Navi Ashapuri, Ram Wadi, Vadodara – 390024, Gujarat, India.
-- Google Maps Location: https://www.google.com/maps/search/?api=1&query=14%2C+Siddharth+Elegance%2C+Navayard+Rd%2C+near+SBI+Bank%2C+Navi+Ashapuri%2C+Ram+Wadi%2C+Vadodara%2C+Gujarat+390024
-- Phone / WhatsApp: +91 70162 92613 / +91 98796 10179
-- Email: parikshitclinic20@gmail.com
-- Hours: Monday – Saturday 10:00 AM – 1:00 PM and 5:00 PM – 8:00 PM (Dedicated 30-minute consultation slots). Sunday by prior appointment.
+## Department 1: Dental & Periodontal Procedures
+- [Routine Exams](https://parikshit.space/services/routine-exams): Comprehensive dental assessment, periodontal screening, and digital radiography when clinically indicated.
+- [Teeth Cleanings](https://parikshit.space/services/teeth-cleanings): Professional ultrasonic scaling, plaque removal, and tooth polishing for gingival wellness.
+- [Dental Fillings](https://parikshit.space/services/dental-fillings): Tooth-colored composite resin restorations for decayed, fractured, or worn enamel.
+- [Tooth Extractions](https://parikshit.space/services/tooth-extractions): Atraumatic removal of severely damaged, non-restorable, or impacted teeth under local anesthesia.
+- [Emergency Dentistry](https://parikshit.space/services/emergency-dentistry): Rapid relief for acute toothache, cracked teeth, lost restorations, or soft-tissue dental trauma in Vadodara.
+- [Pediatric Dentistry](https://parikshit.space/services/pediatric-dentistry): Child-friendly preventive exams, fluoride application, cavity fillings, and gentle deciduous pulpectomy.
+- [Root Canal Treatment](https://parikshit.space/services/root-canal-treatment): Endodontic therapy to remove infected pulp, sterilize canals, and salvage natural teeth.
+- [Crowns & Bridges](https://parikshit.space/services/crowns-bridges): Custom zirconia and ceramic crowns and fixed multi-unit bridges to restore biting function.
+- [Dentures](https://parikshit.space/services/dentures): Complete and partial removable prosthetics tailored for masticatory function and facial support.
+- [Dental Implants](https://parikshit.space/services/dental-implants): Titanium implant placement for permanent, biologically stable tooth replacement.
+- [Gum Flap Surgery](https://parikshit.space/services/flap-surgery): Specialist periodontal pocket reduction and open-flap debridement by Dr. Jinal Parmar (MDS).
+- [Bone Grafting](https://parikshit.space/services/bone-grafting): Regenerative biomaterial placement to rebuild alveolar ridge volume for implants and periodontally compromised teeth.
+- [Gingivectomy](https://parikshit.space/services/gingivectomy): Surgical contouring of hypertrophic or uneven gum margins for periodontal health and aesthetics.
+- [Scaling & Root Planing](https://parikshit.space/services/scaling-root-planing): Deep subgingival debridement and cementum smoothing to arrest active chronic periodontitis.
+- [Crown Lengthening](https://parikshit.space/services/crown-lengthening): Periodontal tissue and bone recontouring to expose sound tooth structure for prosthetic crowns.
+- [Frenectomy](https://parikshit.space/services/frenectomy): Gentle surgical release of restrictive labial or lingual frena (tongue-tie or lip-tie).
+- [Teeth Whitening](https://parikshit.space/services/teeth-whitening): Safe in-office dental bleaching to lighten extrinsic and intrinsic dental discoloration.
+- [Composite Bonding](https://parikshit.space/services/composite-bonding): Direct artistic sculpting of tooth-colored composite resin for chipped, spaced, or uneven teeth.
+- [Porcelain Veneers](https://parikshit.space/services/porcelain-veneers): Ultra-thin handcrafted ceramic laminates bonded to anterior teeth for a harmonious smile.
+- [Splinting](https://parikshit.space/services/splinting): Stabilization of hypermobile teeth resulting from advanced periodontitis or traumatic dental injury.
+- [Abscess Drainage](https://parikshit.space/services/abscess-drainage): Urgent therapeutic decompression and antibacterial cleansing of acute periodontal or periapical swellings.
+- [Night Guards](https://parikshit.space/services/night-guards): Custom-fabricated occlusal splints to protect dentition from sleep bruxism and alleviate TMJ strain.
+- [Sports Mouthguards](https://parikshit.space/services/sports-mouthguards): Shock-absorbing protective mouthpieces tailored for athletes to prevent facial and dental trauma.
+
+## Department 2: Facial Aesthetics & Cosmetology Procedures
+- [HydraFacial Treatment](https://parikshit.space/services/hydrafacial-treatment): Multi-step clinical vortex extraction, exfoliation, and antioxidant hydration for radiant facial skin.
+- [Face PRP Treatment](https://parikshit.space/services/face-prp-treatment): Autologous Platelet-Rich Plasma micro-injections to stimulate facial collagen, elasticity, and dermal regeneration.
+- [Hair PRP Treatment](https://parikshit.space/services/hair-prp-treatment): Targeted scalp platelet therapy to activate miniaturized follicles and combat androgenetic hair thinning.
+- [Chemical Peel](https://parikshit.space/services/chemical-peel): Dermatological acid peels (glycolic, salicylic, lactic) for hyperpigmentation, acne scars, and cell renewal.
+- [Dermaplaning](https://parikshit.space/services/dermaplaning): Surgical blade exfoliation removing dead stratum corneum cells and vellus peach fuzz.
+- [Microneedling](https://parikshit.space/services/microneedling): Precision collagen induction therapy to refine texture, reduce pores, and soften acne scarring.
+- [Carbon Laser Peel](https://parikshit.space/services/carbon-laser-peel): Q-switched laser peeling with liquid carbon paste for pore tightening and sebum regulation.
+- [Plasma Pen Skin Tightening](https://parikshit.space/services/plasma-pen-skin-tightening): Fibroblast sublimation technology to firm lax periorbital skin, eyelids, and superficial lines.
+- [Mesotherapy](https://parikshit.space/services/mesotherapy): Micro-infusion of vitamins, minerals, and hyaluronic acid into the mesoderm for skin rejuvenation.
+- [Laser Skin Rejuvenation](https://parikshit.space/services/laser-skin-rejuvenation): Non-ablative laser light therapy targeting photoaging, sunspots, and uneven tone.
+- [Eyelid Xanthelasma Removal](https://parikshit.space/services/eyelid-xanthelasma-removal): Controlled cosmetic clearance of periocular cholesterol deposits with minimal scarring.
+- [Milia & Skin Tag Removal](https://parikshit.space/services/milia-skin-tag-removal): Hyfrecation or sterile enucleation of benign cutaneous tags, keratin cysts, and milia.
+
+## Important Patient Policies
+- Detailed written estimates are always provided before initiating multi-stage treatments.
+- Payment accepted via UPI (PhonePe, GPay, Paytm), credit/debit cards, net banking, and cash. Official documentation issued for mediclaim or dental reimbursement.
+- For complete procedure protocols and extended clinical guidelines, refer to the full knowledge base at https://parikshit.space/llms-full.txt.

@@ -30,6 +30,13 @@ export const metadata: Metadata = {
     locale: "en_IN",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Clinical Services Directory | PARIKSHIT CLINIC Vadodara",
+    description:
+      "35 specialized dental, periodontal, and facial aesthetic treatments by Dr. Jinal Parmar (BDS, MDS, FFAC) at PARIKSHIT CLINIC, Vadodara.",
+    images: ["/parikshit-operatory.jpg"],
+  },
 };
 
 export default function ServicesPage() {
@@ -39,8 +46,31 @@ export default function ServicesPage() {
   // Group dental by category
   const dentalCategories = Array.from(new Set(dentalServices.map((s) => s.category)));
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://parikshit.space",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Services Directory",
+        item: "https://parikshit.space/services",
+      },
+    ],
+  };
+
   return (
     <div className="min-h-screen bg-surface flex flex-col">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <Navbar />
 
       <main className="flex-1">
@@ -102,8 +132,9 @@ export default function ServicesPage() {
               <div className="space-y-10">
                 {dentalCategories.map((category) => {
                   const servicesInCat = dentalServices.filter((s) => s.category === category);
+                  const categorySlug = category.toLowerCase().replace(/[^a-z0-9]+/g, "-");
                   return (
-                    <div key={category}>
+                    <div key={category} id={categorySlug} className="scroll-mt-24">
                       <h3 className="text-base sm:text-lg font-semibold text-primary mb-4 flex items-center gap-2">
                         <span className="w-2 h-2 rounded-full bg-secondary" />
                         {category}
@@ -140,7 +171,7 @@ export default function ServicesPage() {
             </div>
 
             {/* Department 2: Facial Aesthetics & Cosmetology */}
-            <div>
+            <div id="general-care" className="scroll-mt-24">
               <div className="flex items-center gap-3 mb-8 pb-4 border-b border-surface-container-highest">
                 <div className="w-10 h-10 rounded-xl bg-secondary text-white flex items-center justify-center">
                   <Sparkles className="w-5 h-5" />

@@ -113,9 +113,9 @@ export function StepService({
                 </div>
 
                 {/* Title & description */}
-                <h4 className="font-serif text-lg font-semibold text-primary group-hover:text-primary-container transition-colors">
+                <span className="block font-serif text-lg font-semibold text-primary group-hover:text-primary-container transition-colors">
                   {service.title}
-                </h4>
+                </span>
                 <p className="text-xs sm:text-sm text-on-surface-variant mt-2 leading-relaxed">
                   {service.description}
                 </p>

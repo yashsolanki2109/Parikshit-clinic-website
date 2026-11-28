@@ -76,9 +76,9 @@ export function StepComfort({
 
             <div>
               <div className="flex items-center justify-center sm:justify-start lg:justify-center gap-1.5">
-                <h4 className="font-serif text-xl font-bold text-primary">
+                <span className="block font-serif text-xl font-bold text-primary">
                   {DOCTOR_PROFILE.name}
-                </h4>
+                </span>
                 <span className="text-xs font-semibold text-secondary-container bg-primary px-2 py-0.5 rounded-full text-[11px]">
                   {DOCTOR_PROFILE.credentials}
                 </span>
@@ -121,9 +121,9 @@ export function StepComfort({
         <div className="lg:col-span-7 bg-white rounded-2xl border border-surface-container-highest/70 p-5 md:p-6 shadow-xs space-y-4">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-2 border-b border-surface-container-highest/60">
             <div>
-              <h4 className="font-serif text-lg font-semibold text-primary">
+              <span className="block font-serif text-lg font-semibold text-primary">
                 Personalize Your Comfort Menu
-              </h4>
+              </span>
               <p className="text-xs text-on-surface-variant mt-0.5">
                 Select any or all amenities below. We prepare your chair before arrival.
               </p>

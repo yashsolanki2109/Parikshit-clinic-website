@@ -1,0 +1,72 @@
+name: CI/CD Deploy to Cloudflare
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    name: Build & Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: TypeScript type check
+        run: npx tsc --noEmit
+
+      - name: Build OpenNext worker (PR verification)
+        if: github.event_name == 'pull_request'
+        run: npm run build:worker
+
+      - name: Build & Deploy to Cloudflare
+        if: github.event_name != 'pull_request'
+        run: npm run deploy
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+
+      - name: Send deployment confirmation email
+        if: success() && github.event_name != 'pull_request'
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          subject: "PARIKSHIT CLINIC Website Has Been Updated"
+          to: ${{ secrets.MAIL_TO }}
+          from: "Parikshit Clinic CI/CD <${{ secrets.MAIL_USERNAME }}>"
+          body: |
+            Hello,
+
+            Your PARIKSHIT CLINIC website has been updated and deployed successfully.
+
+            Live Website: https://parikshit.space
+            Services Page: https://parikshit.space/services
+            Sitemap: https://parikshit.space/sitemap.xml
+
+            Commit Message: ${{ github.event.head_commit.message }}
+            Triggered By: ${{ github.actor }}
+            Commit ID: ${{ github.sha }}
+            Workflow Logs: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}

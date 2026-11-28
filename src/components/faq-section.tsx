@@ -126,25 +126,27 @@ export function FAQSection() {
                         : "bg-surface-container-lowest/90 border-surface-container-highest/80 hover:border-primary/20"
                     }`}
                   >
-                    <button
-                      id={buttonId}
-                      aria-expanded={isOpen}
-                      aria-controls={contentId}
-                      onClick={() => toggleFAQ(index)}
-                      className="w-full flex items-center justify-between text-left p-5 sm:p-6 gap-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-2xl cursor-pointer"
-                    >
-                      <span className="font-serif text-base sm:text-lg font-medium text-primary leading-snug">
-                        {item.question}
-                      </span>
-                      <motion.span
-                        animate={{ rotate: isOpen ? 180 : 0 }}
-                        transition={{ duration: 0.25, ease: [0.4, 0, 0.2, 1] }}
-                        className="shrink-0 w-8 h-8 rounded-full bg-surface-container-low flex items-center justify-center text-primary"
-                        aria-hidden="true"
+                    <h3 className="m-0 p-0 text-left font-normal">
+                      <button
+                        id={buttonId}
+                        aria-expanded={isOpen}
+                        aria-controls={contentId}
+                        onClick={() => toggleFAQ(index)}
+                        className="w-full flex items-center justify-between text-left p-5 sm:p-6 gap-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-2xl cursor-pointer"
                       >
-                        <ChevronDown className="w-4 h-4" />
-                      </motion.span>
-                    </button>
+                        <span className="font-serif text-base sm:text-lg font-medium text-primary leading-snug">
+                          {item.question}
+                        </span>
+                        <motion.span
+                          animate={{ rotate: isOpen ? 180 : 0 }}
+                          transition={{ duration: 0.25, ease: [0.4, 0, 0.2, 1] }}
+                          className="shrink-0 w-8 h-8 rounded-full bg-surface-container-low flex items-center justify-center text-primary"
+                          aria-hidden="true"
+                        >
+                          <ChevronDown className="w-4 h-4" />
+                        </motion.span>
+                      </button>
+                    </h3>
 
                     <AnimatePresence initial={false}>
                       {isOpen && (
@@ -158,9 +160,9 @@ export function FAQSection() {
                           transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
                           className="overflow-hidden"
                         >
-                          <div className="px-5 sm:px-6 pb-6 pt-1 text-sm sm:text-base text-on-surface-variant leading-relaxed border-t border-surface-container-high/60 mt-1">
+                          <p className="aeo-direct-answer px-5 sm:px-6 pb-6 pt-1 text-sm sm:text-base text-on-surface-variant leading-relaxed border-t border-surface-container-high/60 mt-1">
                             {item.answer}
-                          </div>
+                          </p>
                         </motion.div>
                       )}
                     </AnimatePresence>

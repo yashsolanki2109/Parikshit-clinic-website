@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { ALL_SERVICES } from "@/data/services";
 
 // Fixed content revision date prevents Googlebot from discarding lastmod due to fake dynamic timestamps
-const LAST_REVISED = new Date("2026-11-20T00:00:00.000Z");
+const LAST_REVISED = new Date("2026-11-28T00:00:00.000Z");
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://parikshit.space";
@@ -26,6 +26,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: LAST_REVISED,
       changeFrequency: "weekly",
       priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/privacy-policy`,
+      lastModified: LAST_REVISED,
+      changeFrequency: "yearly",
+      priority: 0.5,
+    },
+    {
+      url: `${baseUrl}/terms-of-service`,
+      lastModified: LAST_REVISED,
+      changeFrequency: "yearly",
+      priority: 0.5,
     },
     ...serviceEntries,
   ];

@@ -18,9 +18,9 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://parikshit.space"),
-  title: "PARIKSHIT CLINIC | Dentist & Periodontist in Vadodara | Dr. Jinal Parmar",
+  title: "Dentist & Periodontist in Vadodara | PARIKSHIT CLINIC",
   description:
-    "PARIKSHIT CLINIC in Vadodara provides specialist dental, periodontics, and facial aesthetics care by Dr. Jinal Parmar (BDS, MDS). Request your consultation online.",
+    "PARIKSHIT CLINIC in Vadodara offers specialist dental, periodontics, and facial aesthetics by Dr. Jinal Parmar. Book a 30-minute consultation online.",
   keywords: [
     "PARIKSHIT CLINIC",
     "Dr. Jinal Parmar",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     "PRP Treatment Vadodara",
   ],
   alternates: {
-    canonical: "/",
+    canonical: "https://parikshit.space",
   },
   openGraph: {
     title: "PARIKSHIT CLINIC | Dental & Aesthetics Vadodara",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "PARIKSHIT CLINIC | Dentist & Periodontist in Vadodara",
+    title: "Dentist & Periodontist in Vadodara | PARIKSHIT CLINIC",
     description:
       "Expert dental, periodontics, and facial aesthetics care in Vadodara by Dr. Jinal Parmar.",
     images: ["/parikshit-operatory.jpg"],

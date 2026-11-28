@@ -16,6 +16,8 @@ import {
   Sparkles,
   ArrowRight,
   HelpCircle,
+  ExternalLink,
+  BookOpen,
 } from "lucide-react";
 
 export function generateStaticParams() {
@@ -81,26 +83,62 @@ export default async function ServiceDetailPage({
     notFound();
   }
 
-  const related = getRelatedServices(service.slug, 3);
+  const related = getRelatedServices(service.slug, 4);
+  const categoryAnchor = `/services#${service.category.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
 
-  // Procedure Structured Data for Google Rich Results
+  const procedureType = (() => {
+    if (service.deptId === "aesthetics") return "TherapeuticProcedure";
+    const cat = service.category;
+    if (cat === "Preventive & General Care") return "PhysicalExam";
+    if (cat === "Endodontic & Pulp Therapy") return "TherapeuticProcedure";
+    if (cat === "Specialized Dental Care") return "TherapeuticProcedure";
+    if (cat === "Plastic & Cosmetic Dentistry") return "TherapeuticProcedure";
+    if (cat === "Implantology & Restorative Care") return "SurgicalProcedure";
+    return "SurgicalProcedure";
+  })();
+
+  // Procedure Structured Data for Google Rich Results & AEO
   const procedureSchema = {
     "@context": "https://schema.org",
     "@type": "MedicalProcedure",
     "@id": `https://parikshit.space/services/${service.slug}#procedure`,
     name: service.title,
     description: service.shortDescription,
-    procedureType: "SurgicalProcedure",
+    procedureType,
     bodyLocation: service.deptId === "dental" ? "Mouth" : "Face",
+    howPerformed: service.clinicalDetail,
     relevantSpecialty: {
       "@type": "MedicalSpecialty",
       name: service.department,
+    },
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: [".aeo-direct-answer", ".clinical-summary-text", "#procedure-faq"],
+    },
+    provider: {
+      "@type": "Dentist",
+      "@id": "https://parikshit.space/#clinic",
+      name: "PARIKSHIT CLINIC",
+      telephone: "+91-70162-92613",
+      url: "https://parikshit.space",
     },
     performer: {
       "@type": "Physician",
       "@id": "https://parikshit.space/#doctor",
       name: service.specialist.name,
       jobTitle: service.specialist.title,
+      url: "https://parikshit.space/#about-doctor",
+      image: "https://parikshit.space/JinalParamar.jpeg",
+      telephone: "+91 70162 92613",
+      priceRange: "₹₹",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "14, Siddharth Elegance, Navayard Rd, near SBI Bank, Navi Ashapuri, Ram Wadi",
+        addressLocality: "Vadodara",
+        addressRegion: "Gujarat",
+        postalCode: "390024",
+        addressCountry: "IN",
+      },
     },
     locationCreated: {
       "@type": "Dentist",
@@ -138,7 +176,7 @@ export default async function ServiceDetailPage({
         "@type": "ListItem",
         position: 3,
         name: service.category,
-        item: "https://parikshit.space/services",
+        item: `https://parikshit.space${categoryAnchor}`,
       },
       {
         "@type": "ListItem",
@@ -196,7 +234,9 @@ export default async function ServiceDetailPage({
                 Services
               </Link>
               <ChevronRight className="w-3.5 h-3.5 text-on-surface-variant/60" />
-              <span className="text-secondary font-medium">{service.category}</span>
+              <Link href={categoryAnchor} className="text-secondary font-medium hover:text-primary transition-colors">
+                {service.category}
+              </Link>
               <ChevronRight className="w-3.5 h-3.5 text-on-surface-variant/60" />
               <span className="text-primary font-medium truncate max-w-xs">{service.title}</span>
             </nav>
@@ -277,6 +317,47 @@ export default async function ServiceDetailPage({
           </div>
         </section>
 
+        {/* AEO & GEO Quick Answer & Clinical Specification Section */}
+        <section className="bg-surface-container-lowest border-y border-surface-container-highest/70 py-8 md:py-10">
+          <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+            <div className="max-w-4xl">
+              <span className="text-xs font-semibold uppercase tracking-wider text-secondary mb-2 block">
+                At a Glance · Clinical Summary
+              </span>
+              <h2 className="font-serif text-2xl sm:text-3xl font-normal text-primary mb-4">
+                What is {service.title} and What Does It Involve?
+              </h2>
+              <p className="aeo-direct-answer text-base sm:text-lg text-on-surface leading-relaxed mb-6 font-normal">
+                <strong>{service.title} in Vadodara</strong> at PARIKSHIT CLINIC is a specialized procedure directed by Dr. Jinal Parmar (BDS, MDS). It provides {service.shortDescription.toLowerCase().replace(/\.\.\./g, '')} using advanced sterilized instrumentation and personalized clinical protocols. Suitability and recovery are evaluated during your dedicated 30-minute consultation.
+              </p>
+
+              {/* Specification Table for Google Table Snippets */}
+              <div className="overflow-x-auto rounded-2xl border border-surface-container-highest/80 shadow-xs">
+                <table className="w-full text-left text-xs sm:text-sm">
+                  <thead className="bg-surface-container text-primary font-semibold text-[11px] uppercase tracking-wider border-b border-surface-container-highest">
+                    <tr>
+                      <th scope="col" className="px-4 py-3">Clinical Treatment</th>
+                      <th scope="col" className="px-4 py-3">Department</th>
+                      <th scope="col" className="px-4 py-3">Lead Specialist</th>
+                      <th scope="col" className="px-4 py-3">Session Format</th>
+                      <th scope="col" className="px-4 py-3">Clinic Facility</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-surface-container-highest/60 text-on-surface-variant">
+                    <tr className="bg-surface-container-lowest hover:bg-surface-container-low/40 transition-colors">
+                      <td className="px-4 py-3 font-medium text-primary">{service.title}</td>
+                      <td className="px-4 py-3">{service.department}</td>
+                      <td className="px-4 py-3 text-secondary font-medium">{service.specialist.name} ({service.specialist.qualifications})</td>
+                      <td className="px-4 py-3">Dedicated 30-min window</td>
+                      <td className="px-4 py-3">Navayard Rd, Old Chhani Rd, Vadodara</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Detailed Clinical Assessment & Steps */}
         <section className="py-14 md:py-20">
           <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
@@ -291,7 +372,7 @@ export default async function ServiceDetailPage({
                   <h2 className="font-serif text-2xl sm:text-3xl font-normal text-primary mb-4">
                     About this Treatment at PARIKSHIT CLINIC
                   </h2>
-                  <p className="text-base text-on-surface-variant leading-relaxed mb-6">
+                  <p className="clinical-summary-text text-base text-on-surface-variant leading-relaxed mb-6">
                     {service.clinicalDetail}
                   </p>
                   <div className="p-4 rounded-2xl bg-surface-container-low border border-surface-container-highest/80 text-xs sm:text-sm text-on-surface-variant/90 leading-relaxed">
@@ -308,9 +389,9 @@ export default async function ServiceDetailPage({
                     Step-by-Step Treatment Pathway
                   </h3>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                  <ol className="grid grid-cols-1 sm:grid-cols-2 gap-5 list-none pl-0">
                     {service.steps.map((st) => (
-                      <div
+                      <li
                         key={st.step}
                         className="p-6 rounded-2xl bg-surface-container-lowest border border-surface-container-highest/60 hover:border-primary/30 transition-all"
                       >
@@ -323,9 +404,9 @@ export default async function ServiceDetailPage({
                         <p className="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
                           {st.desc}
                         </p>
-                      </div>
+                      </li>
                     ))}
-                  </div>
+                  </ol>
                 </div>
 
                 {/* FAQs */}
@@ -337,19 +418,21 @@ export default async function ServiceDetailPage({
                     </h3>
                   </div>
 
-                  <div className="space-y-4">
+                  <div id="procedure-faq" className="space-y-4">
                     {service.faqs.map((f, i) => (
                       <details
                         key={i}
                         className="p-5 rounded-2xl bg-surface-container-lowest border border-surface-container-highest/70 group"
                       >
                         <summary className="font-medium text-sm sm:text-base text-primary cursor-pointer list-none flex items-center justify-between">
-                          <span>{f.q}</span>
-                          <span className="text-secondary text-lg group-open:rotate-45 transition-transform">
+                          <h4 className="font-serif text-base sm:text-lg font-medium text-primary text-left m-0">
+                            {f.q}
+                          </h4>
+                          <span className="text-secondary text-lg group-open:rotate-45 transition-transform shrink-0 ml-3">
                             +
                           </span>
                         </summary>
-                        <p className="mt-3 text-xs sm:text-sm text-on-surface-variant leading-relaxed border-t border-surface-container-highest/50 pt-3">
+                        <p className="aeo-faq-answer mt-3 text-xs sm:text-sm text-on-surface-variant leading-relaxed border-t border-surface-container-highest/50 pt-3">
                           {f.a}
                         </p>
                       </details>
@@ -361,7 +444,7 @@ export default async function ServiceDetailPage({
               {/* Right Sidebar: Doctor Card & Appointment Callout */}
               <div className="space-y-6 lg:sticky lg:top-24">
                 {/* Doctor Bio Card */}
-                <div className="p-7 rounded-3xl bg-surface-container-lowest border border-surface-container-highest/70 shadow-xs">
+                <div className="author-byline p-7 rounded-3xl bg-surface-container-lowest border border-surface-container-highest/70 shadow-xs">
                   <div className="w-12 h-12 rounded-2xl bg-primary-fixed/40 text-primary flex items-center justify-center mb-4">
                     <Stethoscope className="w-6 h-6" />
                   </div>
@@ -394,6 +477,37 @@ export default async function ServiceDetailPage({
                       <ShieldCheck className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
                       <span>GDC Reg. No. A-20290 (Gujarat Dental Council)</span>
                     </div>
+                  </div>
+                </div>
+
+                {/* Clinical Reference Standards (GEO Authority Signal) */}
+                <div className="p-6 rounded-3xl bg-surface-container-low border border-surface-container-highest/80 shadow-xs space-y-2.5 text-xs text-on-surface-variant leading-relaxed">
+                  <div className="flex items-center gap-2 text-primary font-semibold">
+                    <BookOpen className="w-4 h-4 text-secondary shrink-0" />
+                    <span>Clinical Reference Standards</span>
+                  </div>
+                  <p>
+                    Procedures follow diagnostic protocols established by the <cite className="font-medium text-primary">Indian Dental Association (IDA)</cite> and the <cite className="font-medium text-primary">Gujarat Dental Council (GDC)</cite>.
+                  </p>
+                  <div className="pt-2 border-t border-surface-container-highest/60 space-y-1.5 text-[11px]">
+                    <a
+                      href="https://www.who.int/news-room/fact-sheets/detail/oral-health"
+                      target="_blank"
+                      rel="reference external noopener"
+                      className="flex items-center gap-1.5 text-secondary hover:text-primary transition-colors"
+                    >
+                      <ExternalLink className="w-3 h-3 shrink-0" />
+                      <span>WHO Oral Health Evidence Guidelines</span>
+                    </a>
+                    <a
+                      href="https://www.ncbi.nlm.nih.gov/"
+                      target="_blank"
+                      rel="reference external noopener"
+                      className="flex items-center gap-1.5 text-secondary hover:text-primary transition-colors"
+                    >
+                      <ExternalLink className="w-3 h-3 shrink-0" />
+                      <span>National Institutes of Health (NIH) Medical Index</span>
+                    </a>
                   </div>
                 </div>
 

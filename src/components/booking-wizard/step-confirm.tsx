@@ -513,9 +513,9 @@ export function StepConfirm({
         {/* Right Column: Reservation Recap Sidebar (5 cols on lg) */}
         <div className="lg:col-span-5 bg-surface-container-low/60 rounded-2xl border border-surface-container-highest/70 p-5 md:p-6 shadow-xs space-y-4">
           <div className="flex items-center justify-between pb-3 border-b border-surface-container-highest/60">
-            <h4 className="font-serif text-lg font-semibold text-primary">
+            <span className="block font-serif text-lg font-semibold text-primary">
               Appointment Summary
-            </h4>
+            </span>
             <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-800 bg-emerald-100/80 px-2.5 py-0.5 rounded-full">
               Pending Confirmation
             </span>

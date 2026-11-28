@@ -237,13 +237,26 @@ export function Footer() {
               href="/services"
               className="hover:text-primary transition-colors focus:outline-none focus-visible:underline"
             >
-              Services
+              Services Directory
             </a>
             <a
               href="/#faq"
               className="hover:text-primary transition-colors focus:outline-none focus-visible:underline"
             >
               FAQ
+            </a>
+            <span className="hidden sm:inline text-surface-container-highest" aria-hidden="true">|</span>
+            <a
+              href="/privacy-policy"
+              className="hover:text-primary transition-colors focus:outline-none focus-visible:underline"
+            >
+              Privacy Policy
+            </a>
+            <a
+              href="/terms-of-service"
+              className="hover:text-primary transition-colors focus:outline-none focus-visible:underline"
+            >
+              Terms of Service
             </a>
           </div>
         </div>

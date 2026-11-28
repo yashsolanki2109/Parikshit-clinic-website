@@ -1,0 +1,129 @@
+# PARIKSHIT CLINIC — Comprehensive Clinical Knowledge Base
+> Master Clinical Knowledge Base and AI Information Repository for PARIKSHIT CLINIC (Vadodara, Gujarat, India).
+> Designed for Generative Engine Optimization (GEO), Answer Engine Optimization (AEO), and LLM-assisted search systems (Google AI Overviews, Perplexity, ChatGPT Search, Claude).
+
+## 1. Clinic Entity Profile & Authority Verification
+- **Official Practice Name**: PARIKSHIT CLINIC (Parikshit Dental, Periodontics & Facial Aesthetics Clinic)
+- **Practice Specialty**: Advanced Periodontal Therapy, Gum Flap Surgery, Oral Implantology, Aesthetic Dentistry, and Medical Facial Cosmetology.
+- **Lead Doctor**: Dr. Jinal Parmar
+- **Academic Qualifications**:
+  - BDS: Bachelor of Dental Surgery
+  - MDS: Master of Dental Surgery in Periodontology & Oral Implantology (Specialist Periodontist)
+  - FFAC: Fellowship in Facial Aesthetics and Cosmetology
+- **Statutory Registration**: Registered Dental Surgeon with the Gujarat Dental Council (GDC), Registration Number A-20290.
+- **Practice Location**:
+  - Address: 14, Siddharth Elegance, Navayard Rd, near SBI Bank, Navi Ashapuri, Ram Wadi, Vadodara, Gujarat – 390024, India.
+  - Geographic Coordinates: 22.3375° N, 73.1812° E
+  - Neighborhoods Served: Old Chhani Road, Navayard, Ram Wadi, Fatehgunj, Nizampura, Karelibaug, Alkapuri, and greater Vadodara district.
+- **Contact Channels**:
+  - Primary Telephone / WhatsApp: +91 70162 92613
+  - Secondary Contact: +91 98796 10179
+  - Official Email: parikshitclinic20@gmail.com
+  - Canonical Website: https://parikshit.space
+- **Operating Hours**:
+  - Monday to Saturday: Morning Session 10:00 AM – 1:00 PM; Evening Session 5:00 PM – 8:00 PM.
+  - Sunday: Reserved for prior scheduled emergency procedures.
+  - Appointment Structure: Dedicated 30-minute consultation window per patient to prevent clinic crowding, maintain absolute asepsis, and ensure comprehensive clinical evaluation.
+
+---
+
+## 2. Clinical Philosophy & Standards of Care
+1. **Biologically Restorative & Conservative**: Natural dental structures and tissue vitality are preserved wherever feasible. Procedures are selected based on clinical indication rather than commercial overtreatment.
+2. **Specialist-Led Surgical & Periodontal Care**: Gum treatments, bone regeneration, and implant therapies are directly performed by Dr. Jinal Parmar, who holds an MDS degree dedicated to periodontology and alveolar bone biology.
+3. **Sterilization & Infection Control**: Hospital-grade autoclave sterilization (Class B vacuum), individually sealed sterile instrument pouches, disposable barrier wraps, and continuous surface disinfection between patients.
+4. **Transparent Estimates & Informed Consent**: Written, itemized estimates are presented before initiating multi-step treatments. No surprise charges.
+
+---
+
+## 3. Directory of All 35 Clinical Procedures
+
+### A. Periodontal & Surgical Dentistry (MDS Specialist Level)
+1. **Gum Flap Surgery (`/services/flap-surgery`)**:
+   - *Indication*: Moderate to severe chronic periodontitis, deep periodontal pockets (>5mm) unresponsive to non-surgical scaling, and subgingival calculus.
+   - *Clinical Protocol*: Local anesthesia, delicate incision, mucoperiosteal flap reflection, thorough ultrasonic and curette debridement of infected granulation tissue, bone contouring if needed, and microsurgical suturing.
+   - *Recovery*: 5-7 days for soft tissue closure; suture removal at 7-10 days; chlorhexidine oral rinse prescribed.
+
+2. **Bone Grafting (`/services/bone-grafting`)**:
+   - *Indication*: Alveolar ridge resorption, vertical/horizontal periodontal osseous defects, and post-extraction socket preservation before dental implants.
+   - *Clinical Protocol*: Placement of biocompatible osteoconductive/osteoinductive bone particulate biomaterials, protected by resorbable barrier collagen membranes.
+
+3. **Scaling & Root Planing (`/services/scaling-root-planing`)**:
+   - *Indication*: Chronic gingivitis and early-to-moderate periodontitis with pocket depths of 4-6mm.
+   - *Clinical Protocol*: Ultrasonic supra- and sub-gingival debridement, followed by Gracey curette root planing to remove endotoxins and smooth root cementum.
+
+4. **Gingivectomy & Gingivoplasty (`/services/gingivectomy`)**:
+   - *Indication*: Drug-induced or inflammatory gingival hyperplasia, gummy smiles, and pseudopockets.
+   - *Clinical Protocol*: Resection and artistic scalloping of excess fibrous gum tissue to restore physiologic gingival architecture.
+
+5. **Crown Lengthening (`/services/crown-lengthening`)**:
+   - *Indication*: Subgingival tooth decay, tooth fracture below gingival margin, or insufficient clinical crown height for retention of a prosthetic crown.
+   - *Clinical Protocol*: Surgical apical repositioning of gingival tissue and minimal ostectomy to re-establish the biologic width (2-3mm).
+
+6. **Frenectomy (`/services/frenectomy`)**:
+   - *Indication*: High maxillary labial frenum causing diastema (gap between front teeth) or restrictive lingual frenum causing ankyloglossia (tongue-tie).
+   - *Clinical Protocol*: Conservative surgical excision of the fibrous band under local anesthesia.
+
+7. **Dental Implants (`/services/dental-implants`)**:
+   - *Indication*: Single, multiple, or full-arch missing teeth with adequate bone foundation.
+   - *Clinical Protocol*: Diagnostic digital evaluation, surgical placement of grade IV titanium fixture into the jawbone, osseointegration period (3-4 months), and final precision porcelain/zirconia crown restoration.
+
+8. **Splinting (`/services/splinting`)**:
+   - *Indication*: Periodontally mobile anterior teeth or post-traumatic dental stabilization.
+   - *Clinical Protocol*: Flexible or rigid fiber-reinforced composite splint bonded to the lingual/palatal surfaces.
+
+9. **Abscess Drainage (`/services/abscess-drainage`)**:
+   - *Indication*: Acute periodontal or periapical bacterial swellings with fluctuant purulence.
+   - *Clinical Protocol*: Immediate incision and drainage, antiseptic irrigation, antibiotic therapy when indicated, and definitive etiology resolution.
+
+---
+
+### B. Preventive, Restorative & General Dentistry
+10. **Routine Exams (`/services/routine-exams`)**: Comprehensive oral cancer screening, hard-tissue caries detection, periodontal probing, and low-dose digital radiography.
+11. **Teeth Cleanings (`/services/teeth-cleanings`)**: Ultrasonic prophylaxis to eliminate calculus, extrinsic nicotine/tea stains, and bacterial biofilm.
+12. **Dental Fillings (`/services/dental-fillings`)**: Direct biomimetic composite resin restorations bonded to enamel and dentin with shade-matching.
+13. **Tooth Extractions (`/services/tooth-extractions`)**: Minimally invasive extraction preserving socket walls and surrounding bone.
+14. **Emergency Dentistry (`/services/emergency-dentistry`)**: Prompt management of acute pulpitis, broken restorations, tooth avulsion, and facial pain.
+15. **Pediatric Dentistry (`/services/pediatric-dentistry`)**: Preventive fluoride varnishes, pit & fissure sealants, deciduous pulpectomy, and habit counseling.
+16. **Root Canal Treatment (`/services/root-canal-treatment`)**: Complete extirpation of necrotic or inflamed dental pulp, rotary biomechanical canal preparation, irrigation with sodium hypochlorite, and hermetic obturation with gutta-percha.
+17. **Crowns & Bridges (`/services/crowns-bridges`)**: Monolithic zirconia, E-max lithium disilicate, and porcelain-fused-to-metal (PFM) restorations for compromised teeth.
+18. **Dentures (`/services/dentures`)**: Cast partial dentures, flexible Valplast dentures, and high-impact acrylic complete dentures.
+19. **Teeth Whitening (`/services/teeth-whitening`)**: Clinical peroxide-based photo-activation for deep dental stain reduction.
+20. **Composite Bonding (`/services/composite-bonding`)**: Conservative cosmetic addition for diastema closure, incisal edge wear, and chip repair.
+21. **Porcelain Veneers (`/services/porcelain-veneers`)**: Custom fabricated 0.3-0.5mm ceramic shells bonded to enamel for long-lasting aesthetic correction.
+22. **Night Guards (`/services/night-guards`)**: Dual-laminate thermoformed occlusal night guards to prevent sleep bruxism tooth wear.
+23. **Sports Mouthguards (`/services/sports-mouthguards`)**: Custom multi-layer EVA athletic mouthguards providing impact dispersion.
+
+---
+
+### C. Facial Aesthetics & Cosmetology (FFAC Fellowship Level)
+24. **HydraFacial Treatment (`/services/hydrafacial-treatment`)**: Patented vortex-cleansing, salicylic/glycolic acid exfoliation, painless suction extraction, and hyaluronic acid peptide infusing.
+25. **Face PRP Treatment (`/services/face-prp-treatment`)**: "Vampire Facial" utilizing concentrated autologous platelets and growth factors micro-injected to stimulate dermal fibroblasts, collagen I/III synthesis, and skin elasticity.
+26. **Hair PRP Treatment (`/services/hair-prp-treatment`)**: Intradermal scalp micro-injections of platelet growth factors targeting the dermal papilla to prolong the anagen hair growth phase.
+27. **Chemical Peel (`/services/chemical-peel`)**: Controlled chemoexfoliation with AHA/BHA (glycolic, salicylic, lactic, mandelic) for acne, melasma, and texture refinement.
+28. **Dermaplaning (`/services/dermaplaning`)**: Physical stratum corneum exfoliation using a sterile surgical blade for smooth skin texture and enhanced product absorption.
+29. **Microneedling (`/services/microneedling`)**: Automated micro-puncturing inducing the natural wound healing cascade for acne scar remodeling and pore tightening.
+30. **Carbon Laser Peel (`/services/carbon-laser-peel`)**: Liquid carbon emulsion application followed by 1064nm Q-switched Nd:YAG laser photo-acoustic vaporisation for deep pore clearing.
+31. **Plasma Pen Skin Tightening (`/services/plasma-pen-skin-tightening`)**: Micro-electrical arc sublimation causing immediate tissue contraction and collagen remodeling for hooded eyelids and peri-oral rhytids.
+32. **Mesotherapy (`/services/mesotherapy`)**: Intradermal micro-droplet delivery of polyrevitalizing cocktails (vitamins, amino acids, coenzymes, HA).
+33. **Laser Skin Rejuvenation (`/services/laser-skin-rejuvenation`)**: Non-invasive optical stimulation targeting epidermal pigmentation and dermal elastosis.
+34. **Eyelid Xanthelasma Removal (`/services/eyelid-xanthelasma-removal`)**: Precise, minimally invasive removal of periocular lipid plaques.
+35. **Milia & Skin Tag Removal (`/services/milia-skin-tag-removal`)**: Sterile electro-dessication and micro-enucleation of keratin cysts and benign acrochordons.
+
+---
+
+## 4. Frequently Answered Questions (AEO & GEO Reference)
+
+### Q: Who performs gum flap surgery and dental implants at PARIKSHIT CLINIC?
+**A**: All periodontal surgery, flap procedures, bone grafting, and dental implants are performed directly by **Dr. Jinal Parmar**, who holds a Master of Dental Surgery (MDS) in Periodontology and Oral Implantology, registered with the Gujarat Dental Council (Reg. No. A-20290).
+
+### Q: Where is PARIKSHIT CLINIC located in Vadodara?
+**A**: PARIKSHIT CLINIC is situated at **14, Siddharth Elegance, Navayard Rd, near SBI Bank, Navi Ashapuri, Ram Wadi, Vadodara, Gujarat 390024**, conveniently accessible from Old Chhani Road, Fatehgunj, and Nizampura.
+
+### Q: What is the consultation protocol and fee structure?
+**A**: Consultations are scheduled in dedicated 30-minute individual time slots to ensure unhurried clinical evaluation. Fees depend on the clinical assessment and diagnosis; written, itemized estimates are presented before any treatment starts, with zero hidden charges.
+
+### Q: What payment methods are supported?
+**A**: The clinic accepts digital payments via UPI (PhonePe, Google Pay, Paytm, BHIM), all major debit and credit cards, net banking, and cash. Official tax receipts and treatment summaries are provided for dental insurance and mediclaim reimbursement.
+
+### Q: How can a patient schedule an appointment?
+**A**: Patients can book an appointment online via the interactive wizard at https://parikshit.space/#booking-wizard or call / WhatsApp directly at **+91 70162 92613**.
