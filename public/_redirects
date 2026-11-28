@@ -1,4 +1,0 @@
-# Cloudflare Pages 301 Redirects
-http://parikshit.space/* https://parikshit.space/:splat 301!
-https://www.parikshit.space/* https://parikshit.space/:splat 301!
-http://www.parikshit.space/* https://parikshit.space/:splat 301!
